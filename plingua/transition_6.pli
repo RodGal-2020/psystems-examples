@@ -1,0 +1,10 @@
+@model<transition>
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+        @ms(2) += f;
+		@ms(4) += g;
+
+        [f [g]'4 --> g [f, send_both_ways]'4]'2;
+}

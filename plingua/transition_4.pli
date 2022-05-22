@@ -1,0 +1,9 @@
+@model<transition>
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+        @ms(2) += d;
+
+        [d []'4 --> [d, send_in]'4]'2;
+}

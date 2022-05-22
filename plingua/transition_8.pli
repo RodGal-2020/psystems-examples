@@ -1,0 +1,10 @@
+@model<transition>
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+        @ms(3) += j, k;
+
+        (1) [j, k --> j, preference_1_strong]'3;
+        (2) [j --> , preference_2_weak]'3;
+}

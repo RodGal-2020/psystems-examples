@@ -1,0 +1,44 @@
+@model<transition>
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+		
+		/* Disolution - transition_1.pli */
+        @ms(3) += a;
+        [a --> disolution, @d]'3;
+
+		/* Multiple evolution - transition_2.pli*/	
+        @ms(3) += b;
+        [b --> b*2, r_multiple]'3; 
+		[b*2 --> l_multiple]'3;
+		
+		
+		/* Multiple evolution both sides - transition_3.pli */	
+		@ms(3) += b*2, c*4;
+		[b*2, c*4 --> b*3, c*2, r_&_l_multiple_extra]'3;
+		
+		/* Send in - transition_4.pli */
+        @ms(2) += d;
+        [d []'4 --> [d, send_in]'4]'2;
+		
+		/* Send out - transition_5.pli */	
+		@ms(4) += e;
+        [[e]'4 --> e, send_out []'4]'2;
+		
+		/* Send both ways - transition_6.pli */	
+		@ms(2) += f;
+		@ms(4) += g;
+		[f [g]'4 --> g [f, send_both_ways]'4]'2;
+		
+		/* Preferences - transition_7.pli */	
+		@ms(3) += h, i;
+        (1) [h --> h, preference_1]'3;
+        (2) [i --> i, preference_2]'3;
+												
+		/* Real preferences - transition_8.pli */	
+		@ms(3) += j, k;
+        (1) [j, k --> j, preference_1_strong]'3;
+        (2) [j --> , preference_2_weak]'3;
+		
+}

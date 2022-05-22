@@ -1,5 +1,5 @@
 # example-psystems
-A recopilation of P Systems designed to test simulators
+A recopilation of P Systems designed to test simulators,
 
 ## Structure of the repository
 ### plingua

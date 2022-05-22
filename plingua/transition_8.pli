@@ -6,5 +6,5 @@ def main()
         @ms(3) += j, k;
 
         (1) [j, k --> j, preference_1_strong]'3;
-        (2) [j --> , preference_2_weak]'3;
+        (2) [j --> j, preference_2_weak]'3;
 }

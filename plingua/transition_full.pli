@@ -16,7 +16,7 @@ def main()
 		
 		/* Multiple evolution both sides - transition_3.pli */	
 		@ms(3) += b*2, c*4;
-		[b*2, c*4 --> b*3, c*2, r_&_l_multiple_extra]'3;
+		[b*2, c*4 --> b*3, c*2, r_l_multiple_extra]'3;
 		
 		/* Send in - transition_4.pli */
         @ms(2) += d;
@@ -39,6 +39,6 @@ def main()
 		/* Real preferences - transition_8.pli */	
 		@ms(3) += j, k;
         (1) [j, k --> j, preference_1_strong]'3;
-        (2) [j --> , preference_2_weak]'3;
+        (2) [j --> j, preference_2_weak]'3;
 		
 }

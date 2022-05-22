@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File generated with P-Lingua Compiler 1.0 beta
+See http://www.gcn.us.es for more information.-->
+<cell_like_psystem version="1.0" model="transition">
+  <init_config>
+    <membrane label="1">
+      <membrane label="2">
+        <membrane label="3">
+          <multiset>
+            <object name="h" />
+            <object name="i" />
+          </multiset>
+        </membrane>
+        <membrane label="4" />
+      </membrane>
+    </membrane>
+  </init_config>
+  <rules>
+    <rule priority="1">
+      <left_hand_rule>
+        <outer_membrane label="3">
+          <multiset>
+            <object name="h" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="3">
+          <multiset>
+            <object name="h" />
+            <object name="preference_1" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule priority="2">
+      <left_hand_rule>
+        <outer_membrane label="3">
+          <multiset>
+            <object name="i" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="3">
+          <multiset>
+            <object name="i" />
+            <object name="preference_2" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+  </rules>
+</cell_like_psystem>
+

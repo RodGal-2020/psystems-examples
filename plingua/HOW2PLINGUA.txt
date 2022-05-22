@@ -1,0 +1,2 @@
+cd path/to/directory
+plingua -pli pli_input.pli -xml xml_output.xml

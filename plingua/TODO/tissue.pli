@@ -1,0 +1,17 @@
+@model<tissue_psystems>
+
+def main()
+{
+        /* Membrane structure. */
+        @mu = []'0;
+	@mu(0) *= []'{i} : 1 <= i <= 5;
+
+        /* Initial multiset in membrane labelled by 1. */
+        @ms(1) += a;
+	@ms(0) += b, c;
+
+        /* Rules in membrane labelled by 1. */
+	[a]'1 <--> [b]'0;
+	[a]'1 --> [a]'1 [a]'1;
+
+}

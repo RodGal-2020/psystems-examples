@@ -1,0 +1,3232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File generated with P-Lingua Compiler 1.0 beta
+See http://www.gcn.us.es for more information.-->
+<cell_like_psystem version="1.0" model="membrane_division">
+  <init_config>
+    <membrane label="1">
+      <membrane label="2">
+        <multiset>
+          <object name="d{1}" />
+          <object name="x{1,1}" />
+          <object name="nx{1,2}" />
+          <object name="nx{2,2}" />
+          <object name="x{2,3}" />
+          <object name="nx{2,4}" />
+          <object name="x{3,5}" />
+          <object name="nx{4,6}" />
+        </multiset>
+      </membrane>
+    </membrane>
+  </init_config>
+  <rules>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{1}" />
+          </multiset>
+        </outer_membrane>
+        <second_outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{1}" />
+          </multiset>
+        </second_outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{2}" />
+          </multiset>
+        </outer_membrane>
+        <second_outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{2}" />
+          </multiset>
+        </second_outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{3}" />
+          </multiset>
+        </outer_membrane>
+        <second_outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{3}" />
+          </multiset>
+        </second_outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{4}" />
+          </multiset>
+        </outer_membrane>
+        <second_outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{4}" />
+          </multiset>
+        </second_outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{5}" />
+          </multiset>
+        </outer_membrane>
+        <second_outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{5}" />
+          </multiset>
+        </second_outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </outer_membrane>
+        <second_outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </second_outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="r{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="r{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="r{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="r{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="x{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="x{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="nx{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="nx{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{1}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{1}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{2}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{2}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{3}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{3}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{4}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{4}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{5}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{5}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{6}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="d{6}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="d{1}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="d{2}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="d{3}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="d{4}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="d{5}" />
+        </multiset>
+        <outer_membrane label="2" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,6}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,6}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,6}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,6}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,7}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,7}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,7}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,7}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,7}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,8}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,7}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,8}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,7}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,8}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,7}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,8}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,8}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,9}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,8}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,9}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,8}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,9}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,8}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,9}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,9}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,10}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,9}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,10}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,9}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,10}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,9}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,10}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,10}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,11}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,10}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,11}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,10}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,11}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,10}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,11}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,11}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{1,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,11}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{2,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,11}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{3,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,11}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2">
+          <multiset>
+            <object name="r{4,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{7}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{7}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{8}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{8}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{9}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{9}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{10}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{10}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{11}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{11}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{12}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{13}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{13}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{14}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{14}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{15}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{15}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{16}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{16}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{17}" />
+            <object name="e" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="e" />
+        </multiset>
+        <outer_membrane label="2" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="c{1}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{17}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{18}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{18}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{19}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{19}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{20}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{20}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{21}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{21}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{22}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{22}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{23}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{23}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{24}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{24}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{25}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{25}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{26}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{26}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{27}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{27}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{28}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{28}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{29}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="r{1,12}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="r{1,12}" />
+        </multiset>
+        <outer_membrane label="2" charge="-1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{1,12}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{0,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{2,12}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{1,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{3,12}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{2,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{4,12}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="r{3,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <multiset>
+          <object name="r{1,12}" />
+        </multiset>
+        <outer_membrane label="2" charge="-1" />
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="r{0,12}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{1}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{2}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{2}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{3}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{3}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{4}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{4}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="2" charge="-1">
+          <multiset>
+            <object name="c{5}" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="2" charge="+1">
+          <multiset>
+            <object name="c{5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="c{5}" />
+        </multiset>
+        <outer_membrane label="2" charge="+1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="c{5}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="c{6}" />
+            <object name="t" />
+          </multiset>
+        </outer_membrane>
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="t" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="t" />
+        </multiset>
+        <outer_membrane label="1" charge="+1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1" charge="+1">
+          <multiset>
+            <object name="c{6}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="Yes" />
+        </multiset>
+        <outer_membrane label="1" charge="-1" />
+      </right_hand_rule>
+    </rule>
+    <rule>
+      <left_hand_rule>
+        <outer_membrane label="1">
+          <multiset>
+            <object name="d{29}" />
+          </multiset>
+        </outer_membrane>
+      </left_hand_rule>
+      <right_hand_rule>
+        <multiset>
+          <object name="No" />
+        </multiset>
+        <outer_membrane label="1" charge="+1" />
+      </right_hand_rule>
+    </rule>
+  </rules>
+</cell_like_psystem>
+

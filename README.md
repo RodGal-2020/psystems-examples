@@ -5,5 +5,8 @@ A recopilation of P Systems designed to test simulators,
 ### plingua
 A group of `.pli` files and their associated `.xml` file, made with P-Lingua.
 
+### plingua 5
+A group of `.pli` files and their associated `.xml` & `.json` file, made with P-Lingua. Focused on stochastic P systems.
+
 ### custom (TODO)
 A group of different files showing another way of coding P Systems. 

@@ -1,0 +1,11 @@
+!evolution_rule
+{
+  [ u -> v ]'h;
+}
+
+!skeleton_rule
+{
+  [ [ ]'h ]'h1 --> [ [ ]'h ]'h2 @ sc(int_t);
+}
+
+@model(stochastic) = evolution_rule,skeleton_rule;

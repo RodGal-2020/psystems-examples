@@ -1,0 +1,154 @@
+{
+    "file": {
+        "header": "P-Lingua output file",
+        "version": "1.0",
+        "psystem": {
+            "objects": [],
+            "labels": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "features": [
+                "pattern",
+                "sc"
+            ],
+            "strings": [
+                "evolution_rule",
+                "skeleton_rule",
+                "stochastic"
+            ],
+            "max_multiplicity": 0,
+            "model": {
+                "id": 2
+            },
+            "semantics": {
+                "value": 0,
+                "inf": true,
+                "patterns": [
+                    {
+                        "id": 0
+                    },
+                    {
+                        "id": 1
+                    }
+                ],
+                "children": []
+            },
+            "structure": {
+                "charge": 0,
+                "label": [
+                    {
+                        "id": 0
+                    }
+                ],
+                "children": [
+                    {
+                        "charge": 0,
+                        "label": [
+                            {
+                                "id": 1
+                            }
+                        ],
+                        "children": [
+                            {
+                                "charge": 0,
+                                "label": [
+                                    {
+                                        "id": 3
+                                    }
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "charge": 0,
+                        "label": [
+                            {
+                                "id": 2
+                            }
+                        ],
+                        "children": []
+                    }
+                ]
+            },
+            "multisets": [],
+            "rules": [
+                {
+                    "left_hand_rule": {
+                        "multiset": [],
+                        "membrane": {
+                            "charge": 0,
+                            "label": [
+                                {
+                                    "id": 1
+                                }
+                            ],
+                            "multiset": [],
+                            "children": [
+                                {
+                                    "charge": 0,
+                                    "label": [
+                                        {
+                                            "id": 3
+                                        }
+                                    ],
+                                    "multiset": []
+                                }
+                            ]
+                        }
+                    },
+                    "arrow": 0,
+                    "right_hand_rule": {
+                        "multiset": [],
+                        "membranes": [
+                            {
+                                "charge": 0,
+                                "label": [
+                                    {
+                                        "id": 2
+                                    }
+                                ],
+                                "multiset": [],
+                                "children": [
+                                    {
+                                        "charge": 0,
+                                        "label": [
+                                            {
+                                                "id": 3
+                                            }
+                                        ],
+                                        "multiset": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "features": [
+                        {
+                            "key": {
+                                "id": 0
+                            },
+                            "value": {
+                                "type": 8,
+                                "id": 1
+                            }
+                        },
+                        {
+                            "key": {
+                                "id": 1
+                            },
+                            "value": {
+                                "type": 0,
+                                "value": 2
+                            }
+                        }
+                    ]
+                }
+            ],
+            "features": []
+        }
+    }
+}

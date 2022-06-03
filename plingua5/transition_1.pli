@@ -1,0 +1,10 @@
+@model<stochastic>
+@include "stochastic_model.pli"
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+        @ms(3) += a;
+
+        [a --> disolution, @d]'3;
+}

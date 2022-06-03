@@ -1,0 +1,10 @@
+@model<stochastic>
+@include "stochastic_model.pli"
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+        @ms(3) += b*2, c*4;
+
+		[b*2, c*4 --> b*3, c*2, r_l_multiple_extra]'3;
+}

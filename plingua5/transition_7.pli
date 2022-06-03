@@ -1,0 +1,11 @@
+@model<stochastic>
+@include "stochastic_model.pli"
+
+def main()
+{
+        @mu = [[[]'3 []'4]'2]'1;
+        @ms(3) += h, i;
+
+        (1) [h --> h, preference_1]'3;
+        (2) [i --> i, preference_2]'3;
+}

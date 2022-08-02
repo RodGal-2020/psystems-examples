@@ -1,0 +1,23 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Designed for RAPS 0.0.3.20220729 */
+/* Launch me with: plingua RAPS_like_evolution.pli -o stochastic_001_model_001.xml -f xml*/
+
+def main()
+{
+    print("Using model 001 and evolution, both designed for RAPS 0.0.3.20220729\n\n");
+
+    @mu = [ [ ]'1 [ ]'2 [ [ ]'4]'3 [ [ [ ]'7 ]'6 ]'5 [ ]'s1 [ ]'s2 [ [ ]'s4 ]'s3 [ [ [ ]'s7 ]'s6 ]'s5 ]'0;
+
+    @ms(1) += a1*1, b1*2, c1*3;
+    @ms(2) += a2*2;
+    @ms(3) += a3*3;
+    @ms(4) += a4*4;
+    @ms(5) += a5*5;
+    @ms(6) += a6*6;
+    @ms(7) += a7*7;
+
+    /* TODO: Copy from stochastic_001.pli */
+
+}

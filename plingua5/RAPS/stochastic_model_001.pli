@@ -60,4 +60,4 @@
   [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'i [ v_j ]'j [ v_k ]'k ]'h @ sc(int_t); 
 }
 
-@model(stochastic) = evolution_rule,skeleton_rule;
+@model(stochastic) = RAPS_like_evolution_rule,standard_evolution_rule,skeleton_rule,RAPS_nonstandard_membrane_presence,RAPS_nonstandard_residual_presence,RAPS_nonstandard_crazy_multicommunication;

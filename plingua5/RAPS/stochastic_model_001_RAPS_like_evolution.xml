@@ -15,11 +15,9 @@
 			<labels size="dynamic">
 				<value0>0</value0>
 				<value1>1</value1>
-				<value2>2</value2>
 			</labels>
 			<features size="dynamic">
 				<value0>pattern</value0>
-				<value1>sc</value1>
 			</features>
 			<strings size="dynamic">
 				<value0>RAPS_like_evolution_rule</value0>
@@ -223,15 +221,6 @@
 								<id>0</id>
 							</value>
 						</value0>
-						<value1>
-							<key>
-								<id>1</id>
-							</key>
-							<value>
-								<type>0</type>
-								<value>k</value>
-							</value>
-						</value1>
 					</features>
 				</value1>
 				<value2>
@@ -457,6 +446,66 @@
 										<multiplicity>1</multiplicity>
 									</value>
 								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>2</id>
+										</key>
+										<value>
+											<multiplicity>2</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value5>
+				<value6>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
 								<value1>
 									<key>
 										<id>2</id>
@@ -505,8 +554,8 @@
 							</value>
 						</value0>
 					</features>
-				</value5>
-				<value6>
+				</value6>
+				<value7>
 					<left_hand_rule>
 						<multiset size="dynamic"/>
 						<membrane>
@@ -581,8 +630,8 @@
 							</value>
 						</value0>
 					</features>
-				</value6>
-				<value7>
+				</value7>
+				<value8>
 					<left_hand_rule>
 						<multiset size="dynamic"/>
 						<membrane>
@@ -673,8 +722,8 @@
 							</value>
 						</value0>
 					</features>
-				</value7>
-				<value8>
+				</value8>
+				<value9>
 					<left_hand_rule>
 						<multiset size="dynamic"/>
 						<membrane>
@@ -749,8 +798,8 @@
 							</value>
 						</value0>
 					</features>
-				</value8>
-				<value9>
+				</value9>
+				<value10>
 					<left_hand_rule>
 						<multiset size="dynamic"/>
 						<membrane>
@@ -825,34 +874,26 @@
 							</value>
 						</value0>
 					</features>
-				</value9>
-				<value10>
+				</value10>
+				<value11>
 					<left_hand_rule>
 						<multiset size="dynamic"/>
 						<membrane>
 							<charge></charge>
 							<label size="dynamic">
 								<value0>
-									<id>2</id>
+									<id>1</id>
 								</value0>
 							</label>
 							<multiset size="dynamic">
 								<value0>
-									<key>
-										<id>1</id>
-									</key>
-									<value>
-										<multiplicity>1</multiplicity>
-									</value>
-								</value0>
-								<value1>
 									<key>
 										<id>2</id>
 									</key>
 									<value>
 										<multiplicity>2</multiplicity>
 									</value>
-								</value1>
+								</value0>
 							</multiset>
 							<children size="dynamic"/>
 						</membrane>
@@ -865,7 +906,7 @@
 								<charge></charge>
 								<label size="dynamic">
 									<value0>
-										<id>2</id>
+										<id>1</id>
 									</value0>
 								</label>
 								<multiset size="dynamic">
@@ -874,17 +915,9 @@
 											<id>3</id>
 										</key>
 										<value>
-											<multiplicity>3</multiplicity>
+											<multiplicity>1</multiplicity>
 										</value>
 									</value0>
-									<value1>
-										<key>
-											<id>4</id>
-										</key>
-										<value>
-											<multiplicity>4</multiplicity>
-										</value>
-									</value1>
 								</multiset>
 								<children size="dynamic"/>
 							</value0>
@@ -900,17 +933,68 @@
 								<id>0</id>
 							</value>
 						</value0>
-						<value1>
+					</features>
+				</value11>
+				<value12>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>2</id>
+									</key>
+									<value>
+										<multiplicity>2</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>3</id>
+										</key>
+										<value>
+											<multiplicity>3</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
 							<key>
-								<id>1</id>
+								<id>0</id>
 							</key>
 							<value>
-								<type>0</type>
-								<value>i</value>
+								<type>8</type>
+								<id>0</id>
 							</value>
-						</value1>
+						</value0>
 					</features>
-				</value10>
+				</value12>
 			</rules>
 			<features size="dynamic"/>
 		</psystem>

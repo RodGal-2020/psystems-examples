@@ -1,4 +1,5 @@
-@model<stochastic>
+    
+    @model<stochastic>
 @include "stochastic_model_001.pli"
 
 /* Designed for RAPS 0.0.3.20220729 */
@@ -16,6 +17,9 @@ def main()
     /* Evolution, communication */
     /* [ u -> v ]'h; */
     [ a -> b ]'1;
+    [ a -> b*2 ]'1;
+    [ b*2 -> c ]'1;
+    [ b*2 -> c*3 ]'1;
     [ a -> b, c ]'1;
     [ a -> b, c, d ]'1;
     [ a, b -> c ]'1;
@@ -24,17 +28,21 @@ def main()
     [ a, b, c -> c, d, e ]'1;
     [ a*1, b*2 -> c*3, d*4 ]'1;
     [ a -> ]'1;
+    [ a -> NEW]'1;
 
     /* Stochastic */
     /* [ u -> v ]'h @ sc(int_t); */
-    [ a -> b ]'1 @ sc=101;
-    [ a -> b, c ]'1 @ sc=102;
-    [ a -> b, c, d ]'1 @ sc=1022;
-    [ a, b -> c ]'1 @ sc=103;
-    [ a, b, c -> d ]'1 @ sc=1032;
-    [ a, b -> c, d ]'1 @ sc=104;
-    [ a, b, c -> c, d, e ]'1 @ sc=1042;
-    [ a*1, b*2 -> c*3, d*4 ]'2 @ sc=105;
-    [ a -> ]'1 @ sc=106;
-    [ a -> NEW ]'1 @ sc=107;
+    [ a -> b ]'1 @ sc=1;
+    [ a -> b*2 ]'1 @ sc=1;
+    [ b*2 -> c ]'1 @ sc=1;
+    [ b*2 -> c*3 ]'1 @ sc=1;
+    [ a -> b, c ]'1 @ sc=1;
+    [ a -> b, c, d ]'1 @ sc=1;
+    [ a, b -> c ]'1 @ sc=1;
+    [ a, b, c -> d ]'1 @ sc=1;
+    [ a, b -> c, d ]'1 @ sc=1;
+    [ a, b, c -> c, d, e ]'1 @ sc=1;
+    [ a*1, b*2 -> c*3, d*4 ]'1 @ sc=1;
+    [ a -> ]'1 @ sc=1;
+    [ a -> NEW]'1 @ sc=1;
 }

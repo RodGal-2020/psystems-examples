@@ -22,6 +22,8 @@ def main()
     /* Evolution, communication */
     /* [ u -> v ]'h; */
     [ a -> b ]'1;
+    [ a -> b*2 ]'1;
+    [ b*2 -> c ]'1;
     [ a -> b, c ]'1;
     [ a -> b, c, d ]'1;
     [ a, b -> c ]'2;
@@ -36,6 +38,8 @@ def main()
     /* Stochastic */
     /* [ u -> v ]'h @ sc(int_t); */
     [ a -> b ]'1 @ sc=101;
+    [ a -> b*2 ]'1 @ sc=1012;
+    [ b*2 -> c ]'1 @ sc=1013;
     [ a -> b, c ]'1 @ sc=102;
     [ a -> b, c, d ]'1 @ sc=1022;
     [ a, b -> c ]'2 @ sc=103;

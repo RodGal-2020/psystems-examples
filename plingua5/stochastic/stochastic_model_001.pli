@@ -1,0 +1,41 @@
+/* Designed for RAPS 0.0.3.20220729 */
+
+/* Launch me with: plingua stochastic_XXX.pli -o stochastic_1_model_001.xml -f xml*/
+
+!evolution_rule
+{
+  /* Kinetic constant */
+  /* [u1 [u2]’h1 -> v1 [v2]’h2]'h @ sc(float); */
+
+  /* RAPS - Evolution */
+  [ u -> v ]'h; 
+  [ u -> [ v_in ]'h2 ]'h; 
+  [ [ u_in ]'h1 -> v ]'h; 
+  [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h; 
+
+  /* Standard - Evolution */
+  /* CONTINUED IN ../RAPS/ */
+  [ u -> v ]'h; 
+  [ u -> [ v_in ]'h2 ]'h; 
+  [ [ u_in ]'h1 -> v ]'h; 
+  [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h; 
+
+  /* RAPS - Propensity */
+  [ u -> v ]'h @ sc(int_t); 
+  [ u -> [ v_in ]'h2 ]'h @ sc(int_t); 
+  [ [ u_in ]'h1 -> v ]'h @ sc(int_t); 
+  [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h @ sc(int_t); 
+
+  /* Standard - Propensity */
+  [ u -> v ]'h @ sc(int_t); 
+  [ u -> [ v_in ]'h2 ]'h @ sc(int_t); 
+  [ [ u_in ]'h1 -> v ]'h @ sc(int_t); 
+  [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h @ sc(int_t); 
+}
+
+!skeleton_rule
+{
+  [ [ ]'h ]'h1 --> [ [ ]'h ]'h2 @ sc(int_t);
+}
+
+@model(stochastic) = evolution_rule,skeleton_rule;

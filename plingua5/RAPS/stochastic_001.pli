@@ -1,0 +1,80 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Designed for RAPS 0.0.3.20220729 */
+/* Launch me with: plingua stochastic_001.pli -o stochastic_001_model_001.xml -f xml*/
+
+def main()
+{
+    print("Using model 001");
+    @mu = [ [ ]'1 [ ]'2 [ [ ]'4]'3 [ [ [ ]'7 ]'6 ]'5 [ ]'s1 [ ]'s2 [ [ ]'s4 ]'s3 [ [ [ ]'s7 ]'s6 ]'s5 ]'0;
+
+    @ms(1) += a1*1, b1*2, c1*3;
+    @ms(2) += a2*2;
+    @ms(3) += a3*3;
+    @ms(4) += a4*4;
+    @ms(5) += a5*5;
+    @ms(6) += a6*6;
+    @ms(7) += a7*7;
+    
+    /* !RAPS_like_evolution_rule */
+    /* Evolution, communication */
+    /* TODO: */
+
+    /* Stochastic */
+    /* [ u -> v ]'h @ sc(int_t); */
+    [ a -> b ]'1 @ sc=101;
+    [ a -> b, c]'1 @ sc=102;
+    [ a -> b, c, d]'1 @ sc=1022;
+    [ a, b -> c]'2 @ sc=103;
+    [ a, b, c -> d]'2 @ sc=1032;
+    [ a, b -> c, d]'2 @ sc=104;
+    [ a, b, c -> c, d, e]'2 @ sc=1042;
+    [ a*1, b*2 -> c*3, d*4]'2 @ sc=105;
+    [ a -> ]'1 @ sc=106;
+
+    /* [ u -> [ v_in ]'h2 ]'h @ sc(int_t); */
+    [ a -> [ b ]'4 ]'3 @ sc=201;
+    [ a -> [ b*2 ]'4 ]'3 @ sc=202;
+    [ a*2 -> [ b*2 ]'4 ]'3 @ sc=203;
+    [ a -> [ ]'4 ]'3 @ sc=204;
+    [ a*0 -> [ ]'4 ]'3 @ sc=205;
+
+    /* [ [ u_in ]'h1 -> v ]'h @ sc(int_t); */
+    [ [a]'6 -> b ]'5 @ sc=301;
+    [ [a]'6 -> b*2 ]'5 @ sc=302;
+    [ [a*2]'6 -> b ]'5 @ sc=303;
+    [ [a*2]'6 -> b*2 ]'5 @ sc=304;
+    [ [ ]'6 -> a ]'5 @ sc=305;
+    
+    /* [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h @ sc(int_t); */
+
+
+    /* !standard_evolution_rule */
+    /* Evolution, communication */
+    /* [ u_in ]'h -> v; */
+    /* u [ u_in ]'h -> v [ v_in ]'h; */
+
+    /* Stochastic */
+    /* [ u_in ]'h -> v @ sc(int_t); */
+    /* u [ u_in ]'h -> v [ v_in ]'h @ sc(int_t); */
+
+    /* !skeleton_rule */
+    /* [ [ ]'h ]'h1 --> [ [ ]'h ]'h2 @ sc(int_t); */
+    [ [ ]'4 ]'3 --> [ [ ]'4 ]'2 @ sc=2;
+
+    /* Nonstandard RAPS rules */
+
+    /* !RAPS_nonstandard_membrane_presence */
+    /* [ [ ]'h1 --> v1 [ v2 ]'h2 ]'h @ sc(int_t); */
+    /* [ [ ]'h1 --> v1 [ v2 ]'h2 ]'h; */
+
+    /* !RAPS_nonstandard_residual_presence */
+    /* [ a*0 --> v1 [ v2 ]'h2 ]'h @ sc(int_t); */
+    /* [ a*0 --> v1 [ v2 ]'h2 ]'h; */
+
+    /* !RAPS_nonstandard_crazy_multicommunication */
+    /* [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'i [ v_j ]'j [ v_k ]'k ]'h @ sc(int_t); */
+
+
+}

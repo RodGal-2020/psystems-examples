@@ -1,0 +1,53 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with: plingua stochastic_002.pli -o stochastic_1_model_002.xml -f xml*/
+
+def main()
+{
+    print("Using model 001");
+    @mu = [ [ ]'1 [ ]'2 [ [ ]'4]'3 [ [ [ ]'7 ]'6]'5]'0;
+
+    @ms(1) += a*1, b*2;
+    @ms(2) += a*2, b*2;
+    @ms(3) += a*3;
+    @ms(4) += a*4;
+    @ms(5) += a*5;
+    @ms(6) += a*6;
+    @ms(7) += a*7;
+    
+/* Propensity */
+    /* [ u -> v ]'h @ sc(int_t); */
+    [ a -> b]'1 @ sc=101;
+    [ a -> b, c]'1 @ sc=102;
+    [ a, b -> c]'2 @ sc=103;
+    [ a, b -> c, d]'2 @ sc=104;
+    [ a*1, b*2 -> c*3, d*4]'2 @ sc=105;
+    [ a -> ]'1 @ sc=106;
+    [ a*0 -> b]'1 @ sc=107;
+
+    /* [ u -> [ v_in ]'h2 ]'h @ sc(int_t); */
+    [ a -> [ b ]'4 ]'3 @ sc=201;
+    [ a -> [ b*2 ]'4 ]'3 @ sc=202;
+    [ a*2 -> [ b*2 ]'4 ]'3 @ sc=203;
+    [ a -> [ ]'4 ]'3 @ sc=204;
+    [ a*0 -> [ ]'4 ]'3 @ sc=205;
+
+    /* [ [ u_in ]'h1 -> v ]'h @ sc(int_t); */
+    [ [a]'6 -> b ]'5 @ sc=301;
+    [ [a]'6 -> b ]'5 @ sc=301;
+    [ [a]'6 -> b ]'5 @ sc=301;
+    [ [a]'6 -> b ]'5 @ sc=301;
+    [ [a]'6 -> b ]'5 @ sc=301;
+    
+    [ a -> [ b*2 ]'4 ]'3 @ sc=302;
+    [ a*2 -> [ b*2 ]'4 ]'3 @ sc=303;
+    [ a -> [ ]'4 ]'3 @ sc=304;
+    [ a*0 -> [ ]'4 ]'3 @ sc=305;
+    
+    /* [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h @ sc(int_t); */
+
+/* Skeleton rules*/
+    /* [ [ ]'h ]'h1 --> [ [ ]'h ]'h2 @ sc(int_t); */
+    [ [ ]'4 ]'3 --> [ [ ]'4 ]'2 @ sc=2;
+}

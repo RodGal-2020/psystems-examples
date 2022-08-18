@@ -15,6 +15,10 @@
 			<labels size="dynamic">
 				<value0>0</value0>
 				<value1>1</value1>
+				<value2>2</value2>
+				<value3>3</value3>
+				<value4>4</value4>
+				<value5>5</value5>
 			</labels>
 			<features size="dynamic">
 				<value0>pattern</value0>
@@ -74,6 +78,43 @@
 						</label>
 						<children size="dynamic"/>
 					</value0>
+					<value1>
+						<charge></charge>
+						<label size="dynamic">
+							<value0>
+								<id>2</id>
+							</value0>
+						</label>
+						<children size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>3</id>
+									</value0>
+								</label>
+								<children size="dynamic"/>
+							</value0>
+							<value1>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>4</id>
+									</value0>
+								</label>
+								<children size="dynamic"/>
+							</value1>
+							<value2>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>5</id>
+									</value0>
+								</label>
+								<children size="dynamic"/>
+							</value2>
+						</children>
+					</value1>
 				</children>
 			</structure>
 			<multisets size="dynamic">

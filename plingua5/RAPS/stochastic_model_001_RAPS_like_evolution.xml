@@ -7,10 +7,14 @@
 			<objects size="dynamic">
 				<value0>NEW</value0>
 				<value1>a</value1>
-				<value2>b</value2>
-				<value3>c</value3>
-				<value4>d</value4>
-				<value5>e</value5>
+				<value2>another_object_in_2</value2>
+				<value3>another_object_in_3</value3>
+				<value4>b</value4>
+				<value5>c</value5>
+				<value6>d</value6>
+				<value7>e</value7>
+				<value8>object_in_2</value8>
+				<value9>object_in_3</value9>
 			</objects>
 			<labels size="dynamic">
 				<value0>0</value0>
@@ -135,7 +139,7 @@
 						</value0>
 						<value1>
 							<key>
-								<id>2</id>
+								<id>4</id>
 							</key>
 							<value>
 								<multiplicity>2</multiplicity>
@@ -143,7 +147,7 @@
 						</value1>
 						<value2>
 							<key>
-								<id>3</id>
+								<id>5</id>
 							</key>
 							<value>
 								<multiplicity>3</multiplicity>
@@ -151,6 +155,56 @@
 						</value2>
 					</value>
 				</value0>
+				<value1>
+					<key size="dynamic">
+						<value0>
+							<id>2</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>2</id>
+							</key>
+							<value>
+								<multiplicity>2</multiplicity>
+							</value>
+						</value0>
+						<value1>
+							<key>
+								<id>8</id>
+							</key>
+							<value>
+								<multiplicity>1</multiplicity>
+							</value>
+						</value1>
+					</value>
+				</value1>
+				<value2>
+					<key size="dynamic">
+						<value0>
+							<id>3</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>3</id>
+							</key>
+							<value>
+								<multiplicity>2</multiplicity>
+							</value>
+						</value0>
+						<value1>
+							<key>
+								<id>9</id>
+							</key>
+							<value>
+								<multiplicity>1</multiplicity>
+							</value>
+						</value1>
+					</value>
+				</value2>
 			</multisets>
 			<rules size="dynamic">
 				<value0>
@@ -301,7 +355,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>2</id>
+											<id>4</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -361,7 +415,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>2</id>
+											<id>4</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -369,7 +423,7 @@
 									</value0>
 									<value1>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -429,7 +483,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>2</id>
+											<id>4</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -437,7 +491,7 @@
 									</value0>
 									<value1>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -445,7 +499,7 @@
 									</value1>
 									<value2>
 										<key>
-											<id>4</id>
+											<id>6</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -505,7 +559,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>2</id>
+											<id>4</id>
 										</key>
 										<value>
 											<multiplicity>2</multiplicity>
@@ -549,7 +603,7 @@
 								</value0>
 								<value1>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>1</multiplicity>
@@ -573,7 +627,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -617,7 +671,7 @@
 								</value0>
 								<value1>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>1</multiplicity>
@@ -641,7 +695,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -649,7 +703,7 @@
 									</value0>
 									<value1>
 										<key>
-											<id>4</id>
+											<id>6</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -693,7 +747,7 @@
 								</value0>
 								<value1>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>1</multiplicity>
@@ -701,7 +755,7 @@
 								</value1>
 								<value2>
 									<key>
-										<id>3</id>
+										<id>5</id>
 									</key>
 									<value>
 										<multiplicity>1</multiplicity>
@@ -725,7 +779,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -733,7 +787,7 @@
 									</value0>
 									<value1>
 										<key>
-											<id>4</id>
+											<id>6</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -741,7 +795,7 @@
 									</value1>
 									<value2>
 										<key>
-											<id>5</id>
+											<id>7</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -785,7 +839,7 @@
 								</value0>
 								<value1>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>1</multiplicity>
@@ -793,7 +847,7 @@
 								</value1>
 								<value2>
 									<key>
-										<id>3</id>
+										<id>5</id>
 									</key>
 									<value>
 										<multiplicity>1</multiplicity>
@@ -817,7 +871,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>4</id>
+											<id>6</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -861,7 +915,7 @@
 								</value0>
 								<value1>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>2</multiplicity>
@@ -885,7 +939,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>3</multiplicity>
@@ -893,7 +947,7 @@
 									</value0>
 									<value1>
 										<key>
-											<id>4</id>
+											<id>6</id>
 										</key>
 										<value>
 											<multiplicity>4</multiplicity>
@@ -929,7 +983,7 @@
 							<multiset size="dynamic">
 								<value0>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>2</multiplicity>
@@ -953,7 +1007,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>1</multiplicity>
@@ -989,7 +1043,7 @@
 							<multiset size="dynamic">
 								<value0>
 									<key>
-										<id>2</id>
+										<id>4</id>
 									</key>
 									<value>
 										<multiplicity>2</multiplicity>
@@ -1013,7 +1067,7 @@
 								<multiset size="dynamic">
 									<value0>
 										<key>
-											<id>3</id>
+											<id>5</id>
 										</key>
 										<value>
 											<multiplicity>3</multiplicity>

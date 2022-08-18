@@ -51,3 +51,36 @@ Podemos ver aquí cómo le asignamos a nuestra *feature* `sc` un valor entero.
 ## Lectura de *features*
 Al generar un archivo JSON o XML es posible recuperar el valor de estas variables en la sección de *features* del mismo.
 
+## Estructura de los XML generados
+cereal > file
+              > header $Properties
+              > version $Properties
+              > psystem
+                        > objects $Properties
+                        > labels $RAP (bound to structure)
+                        > features (?)
+                        > strings $Properties
+                        > max_multiplicity $Properties
+                        > model > id $Properties
+                        > semantics $RAP
+                        > structure $RAP (bound to labels)
+                        > multisets $RAP
+                        > rules > left_hand_rule, arrow, right_hand_rule $Rules
+                        > features (again) $Properties
+
+## RAPS' status
+- [x] cereal > file
+              - [-] > header $Properties
+              - [x] > version $Properties
+              - [ ] > psystem
+                        - [x] > objects $Properties
+                        - [x] > labels $RAP (bound to structure)
+                        - [-] > features (?)
+                        - [x] > strings $Properties
+                        - [x] > max_multiplicity $Properties
+                        - [x] > model > id $Properties
+                        - [ ] > semantics $RAP
+                        - [ ] > structure $RAP (bound to labels)
+                        - [ ] > multisets $RAP
+                        - [ ] > rules > left_hand_rule, arrow, right_hand_rule $Rules
+                        - [ ] > features (again) $Properties

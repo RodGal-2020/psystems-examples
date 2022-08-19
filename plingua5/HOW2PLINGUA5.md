@@ -68,6 +68,8 @@ cereal > file
                         > rules > left_hand_rule, arrow, right_hand_rule $Rules
                         > features (again) $Properties
 
+## Recordatorios
+- P-Lingua 5.0 lee de derecha a izquierda, y de abajo a arriba, así que las últimas reglas de los documentos XML verdaderamente son las primeras.
 ## RAPS' status
 - [x] cereal > file
               - [-] > header $Properties

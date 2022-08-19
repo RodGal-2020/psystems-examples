@@ -10,3 +10,6 @@
 ## `stochastic_001.pli`
 
 Read it directly.
+
+# Other files
+- `right_hand_rules.xml`: A group of RHS from `stochastic_model_001_RAPS_like_evolution.xml` for testing. The last ones.

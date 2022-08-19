@@ -1,0 +1,19 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Designed for RAPS 0.0.3.20220819 */
+/* Launch me with: plingua RAPS_like_evolution.pli -o stochastic_model_001_RAPS_like_evolution.xml -f xml*/
+
+def main()
+{
+    print("Using model 001 and evolution, both designed for RAPS 0.0.3.20220819\n\n");
+
+    @mu = [ [ ]'1]'0;
+
+    @ms(0) += a_in_0*1;
+    @ms(1) += a_in_1*1;
+
+    /* !RAPS_like_evolution_rule */
+    [ a_in_0 -> b_in_0 ]'0 @ sc=101;
+    [ a_in_1*1 -> b_in_1*1 ]'1 @ sc=102; /* Explicit declaration of multiplicity */
+}

@@ -9,8 +9,8 @@
   /* Evolution, communication */
   [ u -> v ]'h; 
   [ u -> [ v_in ]'h2 ]'h; 
-  [ [ u_in ]'h1 -> v ]'h; 
-  [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h; 
+  [ [ u_in ]'h1 -> v_out ]'h; 
+  [ u_out [ u_in ]'h1 -> v_out [ v_in ]'h2 ]'h; 
 
   /* Stochastic */
   [ u -> v ]'h @ sc(int_t); 
@@ -26,7 +26,9 @@
   /* Evolution, communication */
   /* u -> ; */
   /* u -> v; */
-  /* u -> [ v_in ]'h; */
+  /*u -> [ v_in ]'h; */
+  u_out [ ]'h -> [ v_in ]'h;
+  [u_in]'h -> v_out [ ]'h; 
   [ u_in ]'h -> v; 
   u [ u_in ]'h -> v [ v_in ]'h; 
 
@@ -57,7 +59,8 @@
 }
 
 !RAPS_nonstandard_crazy_multicommunication {
-  [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'i [ v_j ]'j [ v_k ]'k ]'h @ sc(int_t); 
+  [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'l [ v_j ]'m [ v_k ]'n ]'h; 
+  [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'l [ v_j ]'m [ v_k ]'n ]'h @ sc(int_t); 
 }
 
 @model(stochastic) = RAPS_like_evolution_rule,standard_evolution_rule,skeleton_rule,RAPS_nonstandard_membrane_presence,RAPS_nonstandard_residual_presence,RAPS_nonstandard_crazy_multicommunication;

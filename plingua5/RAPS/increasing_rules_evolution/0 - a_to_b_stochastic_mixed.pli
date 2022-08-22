@@ -15,5 +15,5 @@ def main()
 
     /* !RAPS_like_evolution_rule */
     [ a_in_0 -> b_in_0 ]'0 @ sc=101;
-    [ a_in_1*1 -> b_in_1*1 ]'1 @ sc=102; /* Explicit declaration of multiplicity */
+    [ a_in_1*1 -> b_in_1*1 ]'1 @ sc=102;
 }

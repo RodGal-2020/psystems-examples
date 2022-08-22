@@ -10,13 +10,12 @@ def main()
 
     @mu = [ [ ]'1]'0;
 
-    @ms(0) += a_in_0*1;
-    @ms(1) += a_in_1*1;
+    @ms(0) += a_outside;
 
     /* TODO: Copy BETTER from stochastic_001.pli & complete */
 
     /* [ u -> [ v_in ]'h2 ]'h @ sc(int_t); */
-    [ a -> [ b ]'4 ]'3 @ sc=201;
+    [ a_outside -> [ a_inside ]'1 ]'0 @ sc=201;
     [ a -> [ b*2 ]'4 ]'3 @ sc=202;
     [ a*2 -> [ b*2 ]'4 ]'3 @ sc=203;
     [ a -> [ ]'4 ]'3 @ sc=204;

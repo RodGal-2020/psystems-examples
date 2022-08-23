@@ -2,7 +2,7 @@
 @include "stochastic_model_001.pli"
 
 /* Designed for RAPS 0.0.3.20220819 */
-/* Launch me with: plingua RAPS_like_evolution.pli -o stochastic_model_001_RAPS_like_evolution.xml -f xml*/
+/* Launch me with: plingua '0 - a_inside_to_a_outside.pli' -o '0 - a_inside_to_a_outside.xml' -f xml*/
 
 def main()
 {
@@ -12,6 +12,6 @@ def main()
 
     @ms(1) += a_inside;
 
-    [ [ a_inside ]'1 -> a_outside ]'0 @ sc=100; /* RAPS-like */
+    [ [ a_inside ]'1 -> a_outside [ ]'1 ]'0 @ sc=100; /* RAPS-like */
     [a_inside]'1 -> a_outside [ ]'1; /* AM-like without sc */
 }

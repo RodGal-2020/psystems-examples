@@ -147,7 +147,17 @@
 										</value>
 									</value0>
 								</multiset>
-								<children size="dynamic"/>
+								<children size="dynamic">
+									<value0>
+										<charge></charge>
+										<label size="dynamic">
+											<value0>
+												<id>1</id>
+											</value0>
+										</label>
+										<multiset size="dynamic"/>
+									</value0>
+								</children>
 							</value0>
 						</membranes>
 					</right_hand_rule>

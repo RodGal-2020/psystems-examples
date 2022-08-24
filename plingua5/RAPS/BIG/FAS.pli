@@ -191,141 +191,140 @@ def main()
         [FASC : FADD2 : FLIP2[ ]'c → FASC : FADD2 : FLIP[ FLIP ]'c ]'s k3r
 
     /* r59 : FASC : FADD[ CASP8 ]'c → FASC : FADD : CASP8[ ]'c k3f */
-        r59 : FASC : FADD[ CASP8 ]'c → FASC : FADD : CASP8[ ]'c k3f
+        [FASC : FADD[ CASP8 ]'c → FASC : FADD : CASP8[ ]'c ]'s k3f
 
     /* r60 : FASC : FADD : CASP8[ ]'c → FASC : FADD[ CASP8 ]'c k3r */
-        r60 : FASC : FADD : CASP8[ ]'c → FASC : FADD[ CASP8 ]'c k3r
+        [FASC : FADD : CASP8[ ]'c → FASC : FADD[ CASP8 ]'c ]'s k3r
 
     /* r61 : FASC : FADD[ FLIP ]'c → FASC : FADD : FLIP[ ]'c k3f */
-        r61 : FASC : FADD[ FLIP ]'c → FASC : FADD : FLIP[ ]'c k3f
+        [FASC : FADD[ FLIP ]'c → FASC : FADD : FLIP[ ]'c ]'s k3f
 
     /* r62 : FASC : FADD : FLIP[ ]'c → FASC : FADD[ FLIP ]'c k3r */
-        r62 : FASC : FADD : FLIP[ ]'c → FASC : FADD[ FLIP ]'c k3r
+        [FASC : FADD : FLIP[ ]'c → FASC : FADD[ FLIP ]'c ]'s k3r
 
     /* r63 : FASC : FADD2 : CASP82[ ]'c → FASC : FADD2[ CASP8P41 2 ]'c k4 */
-        r63 : FASC : FADD2 : CASP82[ ]'c → FASC : FADD2[ CASP8P41 2 ]'c k4
+        [FASC : FADD2 : CASP82[ ]'c → FASC : FADD2[ CASP8P41 2 ]'c ]'s k4
 
     /* r64 : FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP8[ CASP8P41 2 ]'c k4 */
-        r64 : FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP8[ CASP8P41 2 ]'c k4
+        [FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP8[ CASP8P41 2 ]'c ]'s k4
 
     /* r65 : FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8P41 2 ]'c k4 */
-        r65 : FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8P41 2 ]'c k4
+        [FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8P41 2 ]'c ]'s k4
 
     /* r66 : FASC : FADD3 : CASP82[ ]'c → FASC : FADD3[ CASP8P41 2 ]'c k4 */
-        r66 : FASC : FADD3 : CASP82[ ]'c → FASC : FADD3[ CASP8P41 2 ]'c k4
+        [FASC : FADD3 : CASP82[ ]'c → FASC : FADD3[ CASP8P41 2 ]'c ]'s k4
 
 
-    /* EVOLUTION */
+    /* EVOLUTION IN C */
     /* r67 : [ CASP8P41 2 ]'c → [ CASP8∗2 ]'c k5 */
-        r67 : [ CASP8P41 2 ]'c → [ CASP8∗2 ]'c k5
+        [ CASP8P41 2 → CASP8∗2 ]'c k5
 
     /* r68 : [ CASP8∗2 , CASP3 ]'c → [ CASP8∗2 : CASP3 ]'c k6f */
-        r68 : [ CASP8∗2 , CASP3 ]'c → [ CASP8∗2 : CASP3 ]'c k6f
+        [ CASP8∗2 , CASP3 → CASP8∗2 : CASP3 ]'c k6f
 
     /* r69 : [ CASP8∗2 : CASP3 ]'c → [ CASP8∗2 , CASP3 ]'c k6r */
-        r69 : [ CASP8∗2 : CASP3 ]'c → [ CASP8∗2 , CASP3 ]'c k6r
+        [ CASP8∗2 : CASP3 → CASP8∗2 , CASP3 ]'c k6r
 
     /* r70 : [ CASP8∗2 , CASP3∗ ]'c → [ CASP8∗2 : CASP3 ]'c k7 */
-        r70 : [ CASP8∗2 , CASP3∗ ]'c → [ CASP8∗2 : CASP3 ]'c k7
+        [ CASP8∗2 , CASP3∗ → CASP8∗2 : CASP3 ]'c k7
 
     /* r71 : [ CASP8∗2, Bid ]'c → [ CASP8∗2: Bid ]'c k8f */
-        r71 : [ CASP8∗2, Bid ]'c → [ CASP8∗2: Bid ]'c k8f
+        [ CASP8∗2, Bid → CASP8∗2: Bid ]'c k8f
 
     /* r72 : [ CASP8∗2: Bid ]'c → [ CASP8∗2, Bid ]'c k8r */
-        r72 : [ CASP8∗2: Bid ]'c → [ CASP8∗2, Bid ]'c k8r
+        [ CASP8∗2: Bid → CASP8∗2, Bid ]'c k8r
 
     /* r73 : [ CASP8∗2, tBid ]'c → [ CASP8∗2: Bid ]'c k7 */
-        r73 : [ CASP8∗2, tBid ]'c → [ CASP8∗2: Bid ]'c k7
+        [ CASP8∗2, tBid → CASP8∗2: Bid ]'c k7
 
     /* r74 : [ tBid, Bax ]'c → [ tBid : Bax ]'c k9f */
-        r74 : [ tBid, Bax ]'c → [ tBid : Bax ]'c k9f
+        [ tBid, Bax → tBid : Bax ]'c k9f
 
     /* r75 : [ tBid : Bax ]'c → [ tBid, Bax ]'c k9r */
-        r75 : [ tBid : Bax ]'c → [ tBid, Bax ]'c k9r
+        [ tBid : Bax → tBid, Bax ]'c k9r
 
     /* r76 : [ tBid : Bax, Bax ]'c → [ tBid : Bax2 ]'c k9f */
-        r76 : [ tBid : Bax, Bax ]'c → [ tBid : Bax2 ]'c k9f
+        [ tBid : Bax, Bax → tBid : Bax2 ]'c k9f
 
     /* r77 : [ tBid : Bax2 ]'c → [ tBid : Bax, Bax ]'c k9r */
-        r77 : [ tBid : Bax2 ]'c → [ tBid : Bax, Bax ]'c k9r
+        [ tBid : Bax2 → tBid : Bax, Bax ]'c k9r
 
 
     /* m */
     /* r78 : tBid : Bax2[ Smac ]'m → Smac∗[ ]'m k10 */
-        r78 : tBid : Bax2[ Smac ]'m → Smac∗[ ]'m k10
+        [tBid : Bax2[ Smac ]'m → Smac∗[ ]'m ]'c k10
 
     /* r79 : tBid : Bax2[ Cyto.c ]'m → Cyto.c∗[ ]'m k10 */
-        r79 : tBid : Bax2[ Cyto.c ]'m → Cyto.c∗[ ]'m k10
+        [tBid : Bax2[ Cyto.c ]'m → Cyto.c∗[ ]'m ]'c k10
     /* */
 
 
-    /* STANDARD */
-        STANDARD
+    /* EVOLUTION IN C AGAIN */
     /* r80 : [ Smac∗, XIAP ]'c → [ Smac∗ : XIAP ]'c k11f */
-        r80 : [ Smac∗, XIAP ]'c → [ Smac∗ : XIAP ]'c k11f
+        [ Smac∗, XIAP → Smac∗ : XIAP ]'c k11f
 
     /* r81 : [ Smac∗ : XIAP ]'c → [ Smac∗, XIAP ]'c k11r */
-        r81 : [ Smac∗ : XIAP ]'c → [ Smac∗, XIAP ]'c k11r
+        [ Smac∗ : XIAP → Smac∗, XIAP ]'c k11r
 
     /* r82 : [ Cyto.c∗, Apaf ]'c → [ Cyto.c∗ : Apaf : ATP ]'c k12f */
-        r82 : [ Cyto.c∗, Apaf ]'c → [ Cyto.c∗ : Apaf : ATP ]'c k12f
+        [ Cyto.c∗, Apaf → Cyto.c∗ : Apaf : ATP ]'c k12f
 
     /* r83 : [ Cyto.c∗ : Apaf : ATP ]'c → [ Cyto.c∗, Apaf ]'c k12r */
-        r83 : [ Cyto.c∗ : Apaf : ATP ]'c → [ Cyto.c∗, Apaf ]'c k12r
+        [ Cyto.c∗ : Apaf : ATP → Cyto.c∗, Apaf ]'c k12r
 
     /* r84 : [ Cyto.c∗ : Apaf : ATP, CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9 ]'c k13f */
-        r84 : [ Cyto.c∗ : Apaf : ATP, CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9 ]'c k13f
+        [ Cyto.c∗ : Apaf : ATP, CASP9 → Cyto.c∗ : Apaf : ATP : CASP9 ]'c k13f
 
     /* r85 : [ Cyto.c∗ : Apaf : ATP : CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP, CASP9 ]'c k13r */
-        r85 : [ Cyto.c∗ : Apaf : ATP : CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP, CASP9 ]'c k13r
+        [ Cyto.c∗ : Apaf : ATP : CASP9 → Cyto.c∗ : Apaf : ATP, CASP9 ]'c k13r
 
     /* r86 : [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c k14f */
-        r86 : [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c k14f
+        [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 → Cyto.c∗ : Apaf : ATP : CASP92 ]'c k14f
 
     /* r87 : [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c k14r */
-        r87 : [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c k14r
+        [ Cyto.c∗ : Apaf : ATP : CASP92 → Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c k14r
 
     /* r88 : [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9∗ ]'c k15 */
-        r88 : [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9∗ ]'c k15
+        [ Cyto.c∗ : Apaf : ATP : CASP92 → Cyto.c∗ : Apaf : ATP : CASP9, CASP9∗ ]'c k15
 
     /* r89 : [ CASP9∗, CASP3 ]'c → [ CASP9∗ : CASP3 ]'c k16f */
-        r89 : [ CASP9∗, CASP3 ]'c → [ CASP9∗ : CASP3 ]'c k16f
+        [ CASP9∗, CASP3 → CASP9∗ : CASP3 ]'c k16f
 
     /* r90 : [ CASP9∗ : CASP3 ]'c → [ CASP9∗, CASP3 ]'c k16r */
-        r90 : [ CASP9∗ : CASP3 ]'c → [ CASP9∗, CASP3 ]'c k16r
+        [ CASP9∗ : CASP3 → CASP9∗, CASP3 ]'c k16r
 
     /* r91 : [ CASP9∗ : CASP3 ]'c → [ CASP9∗, CASP3∗ ]'c k17 */
-        r91 : [ CASP9∗ : CASP3 ]'c → [ CASP9∗, CASP3∗ ]'c k17
+        [ CASP9∗ : CASP3 → CASP9∗, CASP3∗ ]'c k17
 
     /* r92 : [ CASP9, XIAP ]'c → [ CASP9 : XIAP ]'c k18f */
-        r92 : [ CASP9, XIAP ]'c → [ CASP9 : XIAP ]'c k18f
+        [ CASP9, XIAP → CASP9 : XIAP ]'c k18f
 
     /* r93 : [ CASP9 : XIAP ]'c → [ CASP9, XIAP ]'c k18r */
-        r93 : [ CASP9 : XIAP ]'c → [ CASP9, XIAP ]'c k18r
+        [ CASP9 : XIAP → CASP9, XIAP ]'c k18r
 
     /* r94 : [ CASP3∗, XIAP ]'c → [ CASP3∗ : XIAP ]'c k19f */
-        r94 : [ CASP3∗, XIAP ]'c → [ CASP3∗ : XIAP ]'c k19f
+        [ CASP3∗, XIAP → CASP3∗ : XIAP ]'c k19f
 
     /* r95 : [ CASP3∗ : XIAP ]'c → [ CASP3∗, XIAP ]'c k19r */
-        r95 : [ CASP3∗ : XIAP ]'c → [ CASP3∗, XIAP ]'c k19r
+        [ CASP3∗ : XIAP → CASP3∗, XIAP ]'c k19r
 
 
     /* m */
     /* r96 : Bax[ Bcl2 ]'m → [ Bcl2 : Bax ]'m k20f */
-        r96 : Bax[ Bcl2 ]'m → [ Bcl2 : Bax ]'m k20f
+        [Bax[ Bcl2 ]'m → [ Bcl2 : Bax ]'m ]'c k20f
 
     /* r97 : [ Bcl2 : Bax ]'m → Bax[ Bcl2 ]'m k20r */
-        r97 : [ Bcl2 : Bax ]'m → Bax[ Bcl2 ]'m k20r
+        [ Bcl2 : Bax ]'m → Bax[ Bcl2 ]'m ]'c k20r
 
     /* r960 : Bid[ Bcl2 ]'m → [ Bcl2 : Bid ]'m k20f */
-        r960 : Bid[ Bcl2 ]'m → [ Bcl2 : Bid ]'m k20f
+        [Bid[ Bcl2 ]'m → [ Bcl2 : Bid ]'m ]'c k20f
 
     /* r970 : [ Bcl2 : Bid ]'m → Bid[ Bcl2 ]'m k20r */
-        r970 : [ Bcl2 : Bid ]'m → Bid[ Bcl2 ]'m k20r
+        [[ Bcl2 : Bid ]'m → Bid[ Bcl2 ]'m ]'c k20r
 
     /* r9600 : tBid[ Bcl2 ]'m → [ Bcl2 : tBid ]'m k20f */
-        r9600 : tBid[ Bcl2 ]'m → [ Bcl2 : tBid ]'m k20f
+        [tBid[ Bcl2 ]'m → [ Bcl2 : tBid ]'m ]'c k20f
 
     /* r9700 : [ Bcl2 : tBid ]'m → tBid[ Bcl2 ]'m k20r */
-        r9700 : [ Bcl2 : tBid ]'m → tBid[ Bcl2 ]'m k20r
+        [[ Bcl2 : tBid ]'m → tBid[ Bcl2 ]'m ]'c k20r
 }

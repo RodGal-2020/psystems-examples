@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<file>
+		<header>P-Lingua output file</header>
+		<version>1.0</version>
+		<psystem>
+			<objects size="dynamic">
+				<value0>a_inside</value0>
+				<value1>a_outside</value1>
+			</objects>
+			<labels size="dynamic">
+				<value0>0</value0>
+				<value1>1</value1>
+			</labels>
+			<features size="dynamic">
+				<value0>pattern</value0>
+			</features>
+			<strings size="dynamic">
+				<value0>RAPS_like_evolution_rule</value0>
+				<value1>RAPS_nonstandard_crazy_multicommunication</value1>
+				<value2>RAPS_nonstandard_membrane_presence</value2>
+				<value3>RAPS_nonstandard_residual_presence</value3>
+				<value4>skeleton_rule</value4>
+				<value5>standard_evolution_rule</value5>
+				<value6>stochastic</value6>
+			</strings>
+			<max_multiplicity>3</max_multiplicity>
+			<model>
+				<id>6</id>
+			</model>
+			<semantics>
+				<value>0</value>
+				<inf>true</inf>
+				<patterns size="dynamic">
+					<value0>
+						<id>0</id>
+					</value0>
+					<value1>
+						<id>1</id>
+					</value1>
+					<value2>
+						<id>2</id>
+					</value2>
+					<value3>
+						<id>3</id>
+					</value3>
+					<value4>
+						<id>4</id>
+					</value4>
+					<value5>
+						<id>5</id>
+					</value5>
+				</patterns>
+				<children size="dynamic"/>
+			</semantics>
+			<structure>
+				<charge></charge>
+				<label size="dynamic">
+					<value0>
+						<id>0</id>
+					</value0>
+				</label>
+				<children size="dynamic">
+					<value0>
+						<charge></charge>
+						<label size="dynamic">
+							<value0>
+								<id>1</id>
+							</value0>
+						</label>
+						<children size="dynamic"/>
+					</value0>
+				</children>
+			</structure>
+			<multisets size="dynamic">
+				<value0>
+					<key size="dynamic">
+						<value0>
+							<id>0</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>1</id>
+							</key>
+							<value>
+								<multiplicity>3</multiplicity>
+							</value>
+						</value0>
+					</value>
+				</value0>
+				<value1>
+					<key size="dynamic">
+						<value0>
+							<id>1</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<multiplicity>3</multiplicity>
+							</value>
+						</value0>
+					</value>
+				</value1>
+			</multisets>
+			<rules size="dynamic">
+				<value0>
+					<left_hand_rule>
+						<multiset size="dynamic">
+							<value0>
+								<key>
+									<id>1</id>
+								</key>
+								<value>
+									<multiplicity>3</multiplicity>
+								</value>
+							</value0>
+						</multiset>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>0</id>
+									</key>
+									<value>
+										<multiplicity>2</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic">
+							<value0>
+								<key>
+									<id>1</id>
+								</key>
+								<value>
+									<multiplicity>2</multiplicity>
+								</value>
+							</value0>
+						</multiset>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>0</id>
+										</key>
+										<value>
+											<multiplicity>3</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>5</id>
+							</value>
+						</value0>
+					</features>
+				</value0>
+			</rules>
+			<features size="dynamic"/>
+		</psystem>
+	</file>
+</cereal>
+

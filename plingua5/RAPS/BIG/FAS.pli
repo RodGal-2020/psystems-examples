@@ -13,7 +13,7 @@ def main()
 	@ms(s) += FASR*6023;
 	@ms(c) += FADD*10040, CASP8*20074, FLIP*48786, CASP3*120460, Bid*15057, Bax*50189, XIAP*18069, Apaf*60230, CASP9*12046;
 
-
+    print("Setting all constants to 1, as the model cannot sustain non-int_t elements\n\n");
     /* Constants */
     k1f = 1
     k1r = 1

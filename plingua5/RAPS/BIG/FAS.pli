@@ -253,26 +253,26 @@ def main()
 
 
     /* EVOLUTION IN C */
-    /* r67: [ CASP8P41 2 ]'c -> [ CASP8∗2 ]'c @ sc=k5 */
-        [ CASP8P41 2 -> CASP8∗2 ]'c @ sc=k5;
+    /* r67: [ CASP8P41 2 ]'c -> [ CASP8x2 ]'c @ sc=k5 */
+        [ CASP8P41 2 -> CASP8x2 ]'c @ sc=k5;
 
-    /* r68: [ CASP8∗2 , CASP3 ]'c -> [ CASP8∗2:CASP3 ]'c @ sc=k6f */
-        [ CASP8∗2 , CASP3 -> CASP8∗2:CASP3 ]'c @ sc=k6f;
+    /* r68: [ CASP8x2 , CASP3 ]'c -> [ CASP8x2:CASP3 ]'c @ sc=k6f */
+        [ CASP8x2 , CASP3 -> CASP8x2:CASP3 ]'c @ sc=k6f;
 
-    /* r69: [ CASP8∗2:CASP3 ]'c -> [ CASP8∗2 , CASP3 ]'c @ sc=k6r */
-        [ CASP8∗2:CASP3 -> CASP8∗2 , CASP3 ]'c @ sc=k6r;
+    /* r69: [ CASP8x2:CASP3 ]'c -> [ CASP8x2 , CASP3 ]'c @ sc=k6r */
+        [ CASP8x2:CASP3 -> CASP8x2 , CASP3 ]'c @ sc=k6r;
 
-    /* r70: [ CASP8∗2 , CASP3∗ ]'c -> [ CASP8∗2:CASP3 ]'c @ sc=k7 */
-        [ CASP8∗2 , CASP3∗ -> CASP8∗2:CASP3 ]'c @ sc=k7;
+    /* r70: [ CASP8x2 , CASP3x ]'c -> [ CASP8x2:CASP3 ]'c @ sc=k7 */
+        [ CASP8x2 , CASP3x -> CASP8x2:CASP3 ]'c @ sc=k7;
 
-    /* r71: [ CASP8∗2, Bid ]'c -> [ CASP8∗2: Bid ]'c @ sc=k8f */
-        [ CASP8∗2, Bid -> CASP8∗2: Bid ]'c @ sc=k8f;
+    /* r71: [ CASP8x2, Bid ]'c -> [ CASP8x2: Bid ]'c @ sc=k8f */
+        [ CASP8x2, Bid -> CASP8x2: Bid ]'c @ sc=k8f;
 
-    /* r72: [ CASP8∗2: Bid ]'c -> [ CASP8∗2, Bid ]'c @ sc=k8r */
-        [ CASP8∗2: Bid -> CASP8∗2, Bid ]'c @ sc=k8r;
+    /* r72: [ CASP8x2: Bid ]'c -> [ CASP8x2, Bid ]'c @ sc=k8r */
+        [ CASP8x2: Bid -> CASP8x2, Bid ]'c @ sc=k8r;
 
-    /* r73: [ CASP8∗2, tBid ]'c -> [ CASP8∗2: Bid ]'c @ sc=k7 */
-        [ CASP8∗2, tBid -> CASP8∗2: Bid ]'c @ sc=k7;
+    /* r73: [ CASP8x2, tBid ]'c -> [ CASP8x2: Bid ]'c @ sc=k7 */
+        [ CASP8x2, tBid -> CASP8x2: Bid ]'c @ sc=k7;
 
     /* r74: [ tBid, Bax ]'c -> [ tBid:Bax ]'c @ sc=k9f */
         [ tBid, Bax -> tBid:Bax ]'c @ sc=k9f;
@@ -291,8 +291,8 @@ def main()
     /* r78: tBid:Bax2[ Smac ]'m -> Smac∗[ ]'m @ sc=k10 */
         [tBid:Bax2[ Smac ]'m -> Smac∗[ ]'m ]'c @ sc=k10;
 
-    /* r79: tBid:Bax2[ Cyto.c ]'m -> Cyto.c∗[ ]'m @ sc=k10 */
-        [tBid:Bax2[ Cyto.c ]'m -> Cyto.c∗[ ]'m ]'c @ sc=k10;
+    /* r79: tBid:Bax2[ Cyto.c ]'m -> Cyto.cx[ ]'m @ sc=k10 */
+        [tBid:Bax2[ Cyto.c ]'m -> Cyto.cx[ ]'m ]'c @ sc=k10;
 
 
     /* EVOLUTION IN C AGAIN */
@@ -302,35 +302,35 @@ def main()
     /* r81: [ Smac∗:XIAP ]'c -> [ Smac∗, XIAP ]'c @ sc=k11r */
         [ Smac∗:XIAP -> Smac∗, XIAP ]'c @ sc=k11r;
 
-    /* r82: [ Cyto.c∗, Apaf ]'c -> [ Cyto.c∗:Apaf:ATP ]'c @ sc=k12f */
-        [ Cyto.c∗, Apaf -> Cyto.c∗:Apaf:ATP ]'c @ sc=k12f;
+    /* r82: [ Cyto.cx, Apaf ]'c -> [ Cyto.cx:Apaf:ATP ]'c @ sc=k12f */
+        [ Cyto.cx, Apaf -> Cyto.cx:Apaf:ATP ]'c @ sc=k12f;
 
-    /* r83: [ Cyto.c∗:Apaf:ATP ]'c -> [ Cyto.c∗, Apaf ]'c @ sc=k12r */
-        [ Cyto.c∗:Apaf:ATP -> Cyto.c∗, Apaf ]'c @ sc=k12r;
+    /* r83: [ Cyto.cx:Apaf:ATP ]'c -> [ Cyto.cx, Apaf ]'c @ sc=k12r */
+        [ Cyto.cx:Apaf:ATP -> Cyto.cx, Apaf ]'c @ sc=k12r;
+CASP9x
+    /* r84: [ Cyto.cx:Apaf:ATP, CASP9 ]'c -> [ Cyto.cx:Apaf:ATP:CASP9 ]'c @ sc=k13f */
+        [ Cyto.cx:Apaf:ATP, CASP9 -> Cyto.cx:Apaf:ATP:CASP9 ]'c @ sc=k13f;
 
-    /* r84: [ Cyto.c∗:Apaf:ATP, CASP9 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP9 ]'c @ sc=k13f */
-        [ Cyto.c∗:Apaf:ATP, CASP9 -> Cyto.c∗:Apaf:ATP:CASP9 ]'c @ sc=k13f;
+    /* r85: [ Cyto.cx:Apaf:ATP:CASP9 ]'c -> [ Cyto.cx:Apaf:ATP, CASP9 ]'c @ sc=k13r */
+        [ Cyto.cx:Apaf:ATP:CASP9 -> Cyto.cx:Apaf:ATP, CASP9 ]'c @ sc=k13r;
 
-    /* r85: [ Cyto.c∗:Apaf:ATP:CASP9 ]'c -> [ Cyto.c∗:Apaf:ATP, CASP9 ]'c @ sc=k13r */
-        [ Cyto.c∗:Apaf:ATP:CASP9 -> Cyto.c∗:Apaf:ATP, CASP9 ]'c @ sc=k13r;
+    /* r86: [ Cyto.cx:Apaf:ATP:CASP9, CASP9 ]'c -> [ Cyto.cx:Apaf:ATP:CASP92 ]'c @ sc=k14f */
+        [ Cyto.cx:Apaf:ATP:CASP9, CASP9 -> Cyto.cx:Apaf:ATP:CASP92 ]'c @ sc=k14f;
 
-    /* r86: [ Cyto.c∗:Apaf:ATP:CASP9, CASP9 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP92 ]'c @ sc=k14f */
-        [ Cyto.c∗:Apaf:ATP:CASP9, CASP9 -> Cyto.c∗:Apaf:ATP:CASP92 ]'c @ sc=k14f;
+    /* r87: [ Cyto.cx:Apaf:ATP:CASP92 ]'c -> [ Cyto.cx:Apaf:ATP:CASP9, CASP9 ]'c @ sc=k14r */
+        [ Cyto.cx:Apaf:ATP:CASP92 -> Cyto.cx:Apaf:ATP:CASP9, CASP9 ]'c @ sc=k14r;
 
-    /* r87: [ Cyto.c∗:Apaf:ATP:CASP92 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP9, CASP9 ]'c @ sc=k14r */
-        [ Cyto.c∗:Apaf:ATP:CASP92 -> Cyto.c∗:Apaf:ATP:CASP9, CASP9 ]'c @ sc=k14r;
+    /* r88: [ Cyto.cx:Apaf:ATP:CASP92 ]'c -> [ Cyto.cx:Apaf:ATP:CASP9, CASP9x ]'c @ sc=k15 */
+        [ Cyto.cx:Apaf:ATP:CASP92 -> Cyto.cx:Apaf:ATP:CASP9, CASP9x ]'c @ sc=k15;
 
-    /* r88: [ Cyto.c∗:Apaf:ATP:CASP92 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP9, CASP9∗ ]'c @ sc=k15 */
-        [ Cyto.c∗:Apaf:ATP:CASP92 -> Cyto.c∗:Apaf:ATP:CASP9, CASP9∗ ]'c @ sc=k15;
+    /* r89: [ CASP9x, CASP3 ]'c -> [ CASP9x:CASP3 ]'c @ sc=k16f */
+        [ CASP9x, CASP3 -> CASP9x:CASP3 ]'c @ sc=k16f;
 
-    /* r89: [ CASP9∗, CASP3 ]'c -> [ CASP9∗:CASP3 ]'c @ sc=k16f */
-        [ CASP9∗, CASP3 -> CASP9∗:CASP3 ]'c @ sc=k16f;
+    /* r90: [ CASP9x:CASP3 ]'c -> [ CASP9x, CASP3 ]'c @ sc=k16r */
+        [ CASP9x:CASP3 -> CASP9x, CASP3 ]'c @ sc=k16r;
 
-    /* r90: [ CASP9∗:CASP3 ]'c -> [ CASP9∗, CASP3 ]'c @ sc=k16r */
-        [ CASP9∗:CASP3 -> CASP9∗, CASP3 ]'c @ sc=k16r;
-
-    /* r91: [ CASP9∗:CASP3 ]'c -> [ CASP9∗, CASP3∗ ]'c @ sc=k17 */
-        [ CASP9∗:CASP3 -> CASP9∗, CASP3∗ ]'c @ sc=k17;
+    /* r91: [ CASP9x:CASP3 ]'c -> [ CASP9x, CASP3x ]'c @ sc=k17 */
+        [ CASP9x:CASP3 -> CASP9x, CASP3x ]'c @ sc=k17;
 
     /* r92: [ CASP9, XIAP ]'c -> [ CASP9:XIAP ]'c @ sc=k18f */
         [ CASP9, XIAP -> CASP9:XIAP ]'c @ sc=k18f;
@@ -338,11 +338,11 @@ def main()
     /* r93: [ CASP9:XIAP ]'c -> [ CASP9, XIAP ]'c @ sc=k18r */
         [ CASP9:XIAP -> CASP9, XIAP ]'c @ sc=k18r;
 
-    /* r94: [ CASP3∗, XIAP ]'c -> [ CASP3∗:XIAP ]'c @ sc=k19f */
-        [ CASP3∗, XIAP -> CASP3∗:XIAP ]'c @ sc=k19f;
+    /* r94: [ CASP3x, XIAP ]'c -> [ CASP3x:XIAP ]'c @ sc=k19f */
+        [ CASP3x, XIAP -> CASP3x:XIAP ]'c @ sc=k19f;
 
-    /* r95: [ CASP3∗:XIAP ]'c -> [ CASP3∗, XIAP ]'c @ sc=k19r */
-        [ CASP3∗:XIAP -> CASP3∗, XIAP ]'c @ sc=k19r;
+    /* r95: [ CASP3x:XIAP ]'c -> [ CASP3x, XIAP ]'c @ sc=k19r */
+        [ CASP3x:XIAP -> CASP3x, XIAP ]'c @ sc=k19r;
 
 
     /* m */

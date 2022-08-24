@@ -13,318 +13,354 @@ def main()
 	@ms(s) += FASR*6023;
 	@ms(c) += FADD*10040, CASP8*20074, FLIP*48786, CASP3*120460, Bid*15057, Bax*50189, XIAP*18069, Apaf*60230, CASP9*12046;
 
-    [ a_outside []'1 -> [ a_inside ]'1 ]'0 @ sc=100; /* RAPS-like */
+
+    /* Constants */
+    k1f = 1
+    k1r = 1
+    k2f = 1
+    k2r = 1
+    k3f = 1
+    k3r = 1
+    k4 = 1
+    k5 = 1
+    k6f = 1
+    k6r = 1
+    k7 = 1
+    k8f = 1
+    k8r = 1
+    k9f = 1
+    k9r = 1
+    k10 = 1
+    k11f = 1
+    k11r = 1
+    k12f = 1
+    k12r = 1
+    k13f = 1
+    k13r = 1
+    k14f = 1
+    k14r = 1
+    k15 = 1
+    k16f = 1
+    k16r = 1
+    k17 = 1
+    k18f = 1
+    k18r = 1
+    k19f = 1
+    k19r = 1
+    k20f = 1
+    k20r = 1
+
+
 
     /* STANDARD */
-    /* r1 : FASL[ FASR ]'s → [ FASC ]'s k1f */
-        [ FASL [ FASR ]'s → [ FASC ]'s ]'e k1f
+    /* r1: FASL[ FASR ]'s -> [ FASC ]'s @ sc=k1f */
+        [ FASL [ FASR ]'s -> [ FASC ]'s ]'e @ sc=k1f;
 
-    /* r2 : [ FASC ]'s → FASL[ FASC ]'s k1r */
-        [ [ FASC ]'s → FASL[ FASC ]'s ]'e k1r
+    /* r2: [ FASC ]'s -> FASL[ FASC ]'s @ sc=k1r */
+        [ [ FASC ]'s -> FASL[ FASC ]'s ]'e @ sc=k1r;
 
-    /* r3 : FASC[ FADD ]'s → FASC : FADD[ ]'s k2f */
-        [ FASC[ FADD ]'c → FASC : FADD[ ]'c ]'s k2f
+    /* r3: FASC[ FADD ]'s -> FASC:FADD[ ]'s @ sc=k2f */
+        [ FASC[ FADD ]'c -> FASC:FADD[ ]'c ]'s @ sc=k2f;
 
-    /* r4 : FASC : FADD[ ]'c → FASC[ FADD ]'c k2r */
-        [ FASC : FADD[ ]'c → FASC[ FADD ]'c ]'s k2r
+    /* r4: FASC:FADD[ ]'c -> FASC[ FADD ]'c @ sc=k2r */
+        [ FASC:FADD[ ]'c -> FASC[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r5 : FASC : FADD[ FADD ]'c → FASC : FADD2[ ]'c k2f */
-        [ FASC : FADD[ FADD ]'c → FASC : FADD2[ ]'c ]'s k2f
+    /* r5: FASC:FADD[ FADD ]'c -> FASC:FADD2[ ]'c @ sc=k2f */
+        [ FASC:FADD[ FADD ]'c -> FASC:FADD2[ ]'c ]'s @ sc=k2f;
 
-    /* r6 : FASC : FADD2[ ]'c → FASC : FADD[ FADD ]'c k2r */
-        [ FASC : FADD2[ ]'c → FASC : FADD[ FADD ]'c ]'s k2r
+    /* r6: FASC:FADD2[ ]'c -> FASC:FADD[ FADD ]'c @ sc=k2r */
+        [ FASC:FADD2[ ]'c -> FASC:FADD[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r7 : FASC : FADD2[ FADD ]'c → FASC : FADD3[ ]'c k2f */
-        [FASC : FADD2[ FADD ]'c → FASC : FADD3[ ]'c ]'s k2f
+    /* r7: FASC:FADD2[ FADD ]'c -> FASC:FADD3[ ]'c @ sc=k2f */
+        [FASC:FADD2[ FADD ]'c -> FASC:FADD3[ ]'c ]'s @ sc=k2f;
 
-    /* r8 : FASC : FADD3[ ]'c → FASC : FADD2[ FADD ]'c k2r */
-        [FASC : FADD3[ ]'c → FASC : FADD2[ FADD ]'c ]'s k2r
+    /* r8: FASC:FADD3[ ]'c -> FASC:FADD2[ FADD ]'c @ sc=k2r */
+        [FASC:FADD3[ ]'c -> FASC:FADD2[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r9 : FASC : FADD2 : CASP8[ FADD ]'c → FASC : FADD3 : CASP8[ ]'c k2f */
-        [FASC : FADD2 : CASP8[ FADD ]'c → FASC : FADD3 : CASP8[ ]'c]'s k2f
+    /* r9: FASC:FADD2:CASP8[ FADD ]'c -> FASC:FADD3:CASP8[ ]'c @ sc=k2f */
+        [FASC:FADD2:CASP8[ FADD ]'c -> FASC:FADD3:CASP8[ ]'c]'s @ sc=k2f;
 
-    /* r10 : FASC : FADD3 : CASP8[ ]'c → FASC : FADD2 : CASP8[ FADD ]'c k2r */
-        [FASC : FADD3 : CASP8[ ]'c → FASC : FADD2 : CASP8[ FADD ]'c]'s k2r
+    /* r10: FASC:FADD3:CASP8[ ]'c -> FASC:FADD2:CASP8[ FADD ]'c @ sc=k2r */
+        [FASC:FADD3:CASP8[ ]'c -> FASC:FADD2:CASP8[ FADD ]'c]'s @ sc=k2r;
 
-    /* r11 : FASC : FADD2 : FLIP[ FADD ]'c → FASC : FADD3 : FLIP[ ]'c k2f */
-        [FASC : FADD2 : FLIP[ FADD ]'c → FASC : FADD3 : FLIP[ ]'c ]'s k2f
+    /* r11: FASC:FADD2:FLIP[ FADD ]'c -> FASC:FADD3:FLIP[ ]'c @ sc=k2f */
+        [FASC:FADD2:FLIP[ FADD ]'c -> FASC:FADD3:FLIP[ ]'c ]'s @ sc=k2f;
 
-    /* r12 : FASC : FADD3 : FLIP[ ]'c → FASC : FADD2 : FLIP[ FADD ]'c k2r */
-        [FASC : FADD3 : FLIP[ ]'c → FASC : FADD2 : FLIP[ FADD ]'c ]'s k2r
+    /* r12: FASC:FADD3:FLIP[ ]'c -> FASC:FADD2:FLIP[ FADD ]'c @ sc=k2r */
+        [FASC:FADD3:FLIP[ ]'c -> FASC:FADD2:FLIP[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r13 : FASC : FADD2 : CASP82[ FADD ]'c → FASC : FADD3 : CASP82[ ]'c k2f */
-        [FASC : FADD2 : CASP82[ FADD ]'c → FASC : FADD3 : CASP82[ ]'c ]'s k2f
+    /* r13: FASC:FADD2:CASP82[ FADD ]'c -> FASC:FADD3:CASP82[ ]'c @ sc=k2f */
+        [FASC:FADD2:CASP82[ FADD ]'c -> FASC:FADD3:CASP82[ ]'c ]'s @ sc=k2f;
 
-    /* r14 : FASC : FADD3 : CASP82[ ]'c → FASC : FADD2 : CASP82[ FADD ]'c k2r */
-        [FASC : FADD3 : CASP82[ ]'c → FASC : FADD2 : CASP82[ FADD ]'c ]'s k2r
+    /* r14: FASC:FADD3:CASP82[ ]'c -> FASC:FADD2:CASP82[ FADD ]'c @ sc=k2r */
+        [FASC:FADD3:CASP82[ ]'c -> FASC:FADD2:CASP82[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r15 : FASC : FADD2 : CASP8 : FLIP[ FADD ]'c → FASC : FADD3 : CASP8 : FLIP[ ]'c k2f */
-        [FASC : FADD2 : CASP8 : FLIP[ FADD ]'c → FASC : FADD3 : CASP8 : FLIP[ ]'c ]'s k2f
+    /* r15: FASC:FADD2:CASP8:FLIP[ FADD ]'c -> FASC:FADD3:CASP8:FLIP[ ]'c @ sc=k2f */
+        [FASC:FADD2:CASP8:FLIP[ FADD ]'c -> FASC:FADD3:CASP8:FLIP[ ]'c ]'s @ sc=k2f;
         
-    /* r16 : FASC : FADD3 : CASP8 : FLIP[ ]'c → FASC : FADD2 : CASP8 : FLIP[ FADD ]'c k2r */
-        [FASC : FADD3 : CASP8 : FLIP[ ]'c → FASC : FADD2 : CASP8 : FLIP[ FADD ]'c ]'s k2r
+    /* r16: FASC:FADD3:CASP8:FLIP[ ]'c -> FASC:FADD2:CASP8:FLIP[ FADD ]'c @ sc=k2r */
+        [FASC:FADD3:CASP8:FLIP[ ]'c -> FASC:FADD2:CASP8:FLIP[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r17 : FASC : FADD2 : FLIP2[ FADD ]'c → FASC : FADD3 : FLIP2[ ]'c k2f */
-        [FASC : FADD2 : FLIP2[ FADD ]'c → FASC : FADD3 : FLIP2[ ]'c ]'s k2f
+    /* r17: FASC:FADD2:FLIP2[ FADD ]'c -> FASC:FADD3:FLIP2[ ]'c @ sc=k2f */
+        [FASC:FADD2:FLIP2[ FADD ]'c -> FASC:FADD3:FLIP2[ ]'c ]'s @ sc=k2f;
 
-    /* r18 : FASC : FADD3 : FLIP2[ ]'c → FASC : FADD2 : FLIP2[ FADD ]'c k2r */
-        [FASC : FADD3 : FLIP2[ ]'c → FASC : FADD2 : FLIP2[ FADD ]'c ]'s k2r
+    /* r18: FASC:FADD3:FLIP2[ ]'c -> FASC:FADD2:FLIP2[ FADD ]'c @ sc=k2r */
+        [FASC:FADD3:FLIP2[ ]'c -> FASC:FADD2:FLIP2[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r19 : FASC : FADD : CASP8[ FADD ]'c → FASC : FADD2 : CASP8[ ]'c k2f */
-        [FASC : FADD : CASP8[ FADD ]'c → FASC : FADD2 : CASP8[ ]'c ]'s k2f
+    /* r19: FASC:FADD:CASP8[ FADD ]'c -> FASC:FADD2:CASP8[ ]'c @ sc=k2f */
+        [FASC:FADD:CASP8[ FADD ]'c -> FASC:FADD2:CASP8[ ]'c ]'s @ sc=k2f;
 
-    /* r20 : FASC : FADD2 : CASP8[ ]'c → FASC : FADD : CASP8[ FADD ]'c k2r */
-        [FASC : FADD2 : CASP8[ ]'c → FASC : FADD : CASP8[ FADD ]'c ]'s k2r
+    /* r20: FASC:FADD2:CASP8[ ]'c -> FASC:FADD:CASP8[ FADD ]'c @ sc=k2r */
+        [FASC:FADD2:CASP8[ ]'c -> FASC:FADD:CASP8[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r21 : FASC : FADD : FLIP[ FADD ]'c → FASC : FADD2 : FLIP[ ]'c k2f */
-        [ FASC : FADD : FLIP[ FADD ]'c → FASC : FADD2 : FLIP[ ]'c ]'s k2f
+    /* r21: FASC:FADD:FLIP[ FADD ]'c -> FASC:FADD2:FLIP[ ]'c @ sc=k2f */
+        [ FASC:FADD:FLIP[ FADD ]'c -> FASC:FADD2:FLIP[ ]'c ]'s @ sc=k2f;
 
-    /* r22 : FASC : FADD2 : FLIP[ ]'c → FASC : FADD : FLIP[ FADD ]'c k2r */
-        [FASC : FADD2 : FLIP[ ]'c → FASC : FADD : FLIP[ FADD ]'c ]'s k2r
+    /* r22: FASC:FADD2:FLIP[ ]'c -> FASC:FADD:FLIP[ FADD ]'c @ sc=k2r */
+        [FASC:FADD2:FLIP[ ]'c -> FASC:FADD:FLIP[ FADD ]'c ]'s @ sc=k2r;
 
-    /* r23 : FASC : FADD3[ CASP8 ]'c → FASC : FADD3 : CASP8[ ]'c k2f */
-        [ FASC : FADD3[ CASP8 ]'c → FASC : FADD3 : CASP8[ ]'c ]'s k2f
+    /* r23: FASC:FADD3[ CASP8 ]'c -> FASC:FADD3:CASP8[ ]'c @ sc=k2f */
+        [ FASC:FADD3[ CASP8 ]'c -> FASC:FADD3:CASP8[ ]'c ]'s @ sc=k2f;
 
-    /* r24 : FASC : FADD3 : CASP8[ ]'c → FASC : FADD3[ CASP8 ]'c k2r */
-        [FASC : FADD3 : CASP8[ ]'c → FASC : FADD3[ CASP8 ]'c ]'s k2r
+    /* r24: FASC:FADD3:CASP8[ ]'c -> FASC:FADD3[ CASP8 ]'c @ sc=k2r */
+        [FASC:FADD3:CASP8[ ]'c -> FASC:FADD3[ CASP8 ]'c ]'s @ sc=k2r;
 
-    /* r25 : FASC : FADD3[ FLIP ]'c → FASC : FADD3 : FLIP[ ]'c k3f */
-        [FASC : FADD3[ FLIP ]'c → FASC : FADD3 : FLIP[ ]'c ]'s k3f
+    /* r25: FASC:FADD3[ FLIP ]'c -> FASC:FADD3:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD3[ FLIP ]'c -> FASC:FADD3:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r26 : FASC : FADD3 : FLIP[ ]'c → FASC : FADD3[ FLIP ]'c k3r */
-        [FASC : FADD3 : FLIP[ ]'c → FASC : FADD3[ FLIP ]'c ]'s k3r
+    /* r26: FASC:FADD3:FLIP[ ]'c -> FASC:FADD3[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD3:FLIP[ ]'c -> FASC:FADD3[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r27 : FASC : FADD3 : CASP8[ CASP8 ]'c → FASC : FADD3 : CASP82[ ]'c k3f */
-        FASC : FADD3 : CASP8[ CASP8 ]'c → FASC : FADD3 : CASP82[ ]'c ]'s k3f
+    /* r27: FASC:FADD3:CASP8[ CASP8 ]'c -> FASC:FADD3:CASP82[ ]'c @ sc=k3f */
+        FASC:FADD3:CASP8[ CASP8 ]'c -> FASC:FADD3:CASP82[ ]'c ]'s @ sc=k3f;
 
-    /* r28 : FASC : FADD3 : CASP82[ ]'c → FASC : FADD3 : CASP8[ CASP8 ]'c k3r */
-        [FASC : FADD3 : CASP82[ ]'c → FASC : FADD3 : CASP8[ CASP8 ]'c ]'s k3r
+    /* r28: FASC:FADD3:CASP82[ ]'c -> FASC:FADD3:CASP8[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD3:CASP82[ ]'c -> FASC:FADD3:CASP8[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r29 : FASC : FADD3 : CASP8[ FLIP ]'c → FASC : FADD3 : CASP8 : FLIP[ ]'c k3f */
-        [FASC : FADD3 : CASP8[ FLIP ]'c → FASC : FADD3 : CASP8 : FLIP[ ]'c ]'s k3f
+    /* r29: FASC:FADD3:CASP8[ FLIP ]'c -> FASC:FADD3:CASP8:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD3:CASP8[ FLIP ]'c -> FASC:FADD3:CASP8:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r30 : FASC : FADD3 : CASP8 : FLIP[ ]'c → FASC : FADD3 : CASP8[ FLIP ]'c k3r */
-        [FASC : FADD3 : CASP8 : FLIP[ ]'c → FASC : FADD3 : CASP8[ FLIP ]'c ]'s k3r
+    /* r30: FASC:FADD3:CASP8:FLIP[ ]'c -> FASC:FADD3:CASP8[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD3:CASP8:FLIP[ ]'c -> FASC:FADD3:CASP8[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r31 : FASC : FADD3 : FLIP[ CASP8 ]'c → FASC : FADD3 : CASP8 : FLIP[ ]'c k3f */
-        [FASC : FADD3 : FLIP[ CASP8 ]'c → FASC : FADD3 : CASP8 : FLIP[ ]'c ]'s k3f
+    /* r31: FASC:FADD3:FLIP[ CASP8 ]'c -> FASC:FADD3:CASP8:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD3:FLIP[ CASP8 ]'c -> FASC:FADD3:CASP8:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r32 : FASC : FADD3 : CASP8 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8 ]'c k3r */
-        [FASC : FADD3 : CASP8 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8 ]'c ]'s k3r
+    /* r32: FASC:FADD3:CASP8:FLIP[ ]'c -> FASC:FADD3:FLIP[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD3:CASP8:FLIP[ ]'c -> FASC:FADD3:FLIP[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r33 : FASC : FADD3 : FLIP[ FLIP ]'c → FASC : FADD3 : FLIP2[ ]'c k3f */
-        [FASC : FADD3 : FLIP[ FLIP ]'c → FASC : FADD3 : FLIP2[ ]'c ]'s k3f
+    /* r33: FASC:FADD3:FLIP[ FLIP ]'c -> FASC:FADD3:FLIP2[ ]'c @ sc=k3f */
+        [FASC:FADD3:FLIP[ FLIP ]'c -> FASC:FADD3:FLIP2[ ]'c ]'s @ sc=k3f;
 
-    /* r34 : FASC : FADD3 : FLIP2[ ]'c → FASC : FADD3 : FLIP[ FLIP ]'c k3r */
-        [FASC : FADD3 : FLIP2[ ]'c → FASC : FADD3 : FLIP[ FLIP ]'c ]'s k3r
+    /* r34: FASC:FADD3:FLIP2[ ]'c -> FASC:FADD3:FLIP[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD3:FLIP2[ ]'c -> FASC:FADD3:FLIP[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r35 : FASC : FADD3 : CASP82[ CASP8 ]'c → FASC : FADD3 : CASP83[ ]'c k3f */
-        [FASC : FADD3 : CASP82[ CASP8 ]'c → FASC : FADD3 : CASP83[ ]'c ]'s k3f
+    /* r35: FASC:FADD3:CASP82[ CASP8 ]'c -> FASC:FADD3:CASP83[ ]'c @ sc=k3f */
+        [FASC:FADD3:CASP82[ CASP8 ]'c -> FASC:FADD3:CASP83[ ]'c ]'s @ sc=k3f;
 
-    /* r36 : FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP82[ CASP8 ]'c k3r */
-        [FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP82[ CASP8 ]'c ]'s k3r
+    /* r36: FASC:FADD3:CASP83[ ]'c -> FASC:FADD3:CASP82[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD3:CASP83[ ]'c -> FASC:FADD3:CASP82[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r37 : FASC : FADD3 : CASP82[ FLIP ]'c → FASC : FADD3 : CASP82 : FLIP[ ]'c k3f */
-        [FASC : FADD3 : CASP82[ FLIP ]'c → FASC : FADD3 : CASP82 : FLIP[ ]'c ]'s k3f
+    /* r37: FASC:FADD3:CASP82[ FLIP ]'c -> FASC:FADD3:CASP82:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD3:CASP82[ FLIP ]'c -> FASC:FADD3:CASP82:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r38 : FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : CASP82[ FLIP ]'c k3r */
-        [FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : CASP82[ FLIP ]'c ]'s k3r
+    /* r38: FASC:FADD3:CASP82:FLIP[ ]'c -> FASC:FADD3:CASP82[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD3:CASP82:FLIP[ ]'c -> FASC:FADD3:CASP82[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r39 : FASC : FADD3 : CASP8 : FLIP[ CASP8 ]'c → FASC : FADD3 : CASP82 : FLIP[ ]'c k3f */
-        [FASC : FADD3 : CASP8 : FLIP[ CASP8 ]'c → FASC : FADD3 : CASP82 : FLIP[ ]'c ]'s k3f
+    /* r39: FASC:FADD3:CASP8:FLIP[ CASP8 ]'c -> FASC:FADD3:CASP82:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD3:CASP8:FLIP[ CASP8 ]'c -> FASC:FADD3:CASP82:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r40 : FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : CASP8 : FLIP[ CASP8 ]'c k3r */
-        [FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : CASP8 : FLIP[ CASP8 ]'c ]'s k3r
+    /* r40: FASC:FADD3:CASP82:FLIP[ ]'c -> FASC:FADD3:CASP8:FLIP[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD3:CASP82:FLIP[ ]'c -> FASC:FADD3:CASP8:FLIP[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r41 : FASC : FADD3 : CASP8 : FLIP[ FLIP ]'c → FASC : FADD3 : CASP8 : FLIP2[ ]'c k3f */
-        [FASC : FADD3 : CASP8 : FLIP[ FLIP ]'c → FASC : FADD3 : CASP8 : FLIP2[ ]'c ]'s k3f
+    /* r41: FASC:FADD3:CASP8:FLIP[ FLIP ]'c -> FASC:FADD3:CASP8:FLIP2[ ]'c @ sc=k3f */
+        [FASC:FADD3:CASP8:FLIP[ FLIP ]'c -> FASC:FADD3:CASP8:FLIP2[ ]'c ]'s @ sc=k3f;
 
-    /* r42 : FASC : FADD3 : CASP8 : FLIP2[ ]'c → FASC : FADD3 : CASP8 : FLIP[ FLIP ]'c k3r */
-        [FASC : FADD3 : CASP8 : FLIP2[ ]'c → FASC : FADD3 : CASP8 : FLIP[ FLIP ]'c ]'s k3r
+    /* r42: FASC:FADD3:CASP8:FLIP2[ ]'c -> FASC:FADD3:CASP8:FLIP[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD3:CASP8:FLIP2[ ]'c -> FASC:FADD3:CASP8:FLIP[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r43 : FASC : FADD3 : FLIP2[ CASP8 ]'c → FASC : FADD3 : CASP8 : FLIP2[ ]'c k3f */
-        [FASC : FADD3 : FLIP2[ CASP8 ]'c → FASC : FADD3 : CASP8 : FLIP2[ ]'c ]'s k3f
+    /* r43: FASC:FADD3:FLIP2[ CASP8 ]'c -> FASC:FADD3:CASP8:FLIP2[ ]'c @ sc=k3f */
+        [FASC:FADD3:FLIP2[ CASP8 ]'c -> FASC:FADD3:CASP8:FLIP2[ ]'c ]'s @ sc=k3f;
 
-    /* r44 : FASC : FADD3 : CASP8 : FLIP2[ ]'c → FASC : FADD3 : FLIP2[ CASP8 ]'c k3r */
-        [FASC : FADD3 : CASP8 : FLIP2[ ]'c → FASC : FADD3 : FLIP2[ CASP8 ]'c ]'s k3r
+    /* r44: FASC:FADD3:CASP8:FLIP2[ ]'c -> FASC:FADD3:FLIP2[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD3:CASP8:FLIP2[ ]'c -> FASC:FADD3:FLIP2[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r45 : FASC : FADD3 : FLIP2[ FLIP ]'c → FASC : FADD3 : FLIP3[ ]'c k3f */
-        [FASC : FADD3 : FLIP2[ FLIP ]'c → FASC : FADD3 : FLIP3[ ]'c ]'s k3f
+    /* r45: FASC:FADD3:FLIP2[ FLIP ]'c -> FASC:FADD3:FLIP3[ ]'c @ sc=k3f */
+        [FASC:FADD3:FLIP2[ FLIP ]'c -> FASC:FADD3:FLIP3[ ]'c ]'s @ sc=k3f;
 
-    /* r46 : FASC : FADD3 : FLIP3[ ]'c → FASC : FADD3 : FLIP2[ FLIP ]'c k3r */
-        [FASC : FADD3 : FLIP3[ ]'c → FASC : FADD3 : FLIP2[ FLIP ]'c ]'s k3r
+    /* r46: FASC:FADD3:FLIP3[ ]'c -> FASC:FADD3:FLIP2[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD3:FLIP3[ ]'c -> FASC:FADD3:FLIP2[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r47 : FASC : FADD2[ CASP8 ]'c → FASC : FADD2 : CASP8[ ]'c k3f */
-        [FASC : FADD2[ CASP8 ]'c → FASC : FADD2 : CASP8[ ]'c ]'s k3f
+    /* r47: FASC:FADD2[ CASP8 ]'c -> FASC:FADD2:CASP8[ ]'c @ sc=k3f */
+        [FASC:FADD2[ CASP8 ]'c -> FASC:FADD2:CASP8[ ]'c ]'s @ sc=k3f;
 
-    /* r48 : FASC : FADD2 : CASP8[ ]'c → FASC : FADD2[ CASP8 ]'c k3r */
-        [FASC : FADD2 : CASP8[ ]'c → FASC : FADD2[ CASP8 ]'c ]'s k3r
+    /* r48: FASC:FADD2:CASP8[ ]'c -> FASC:FADD2[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD2:CASP8[ ]'c -> FASC:FADD2[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r49 : FASC : FADD2[ FLIP ]'c → FASC : FADD2 : FLIP[ ]'c k3f */
-        [FASC : FADD2[ FLIP ]'c → FASC : FADD2 : FLIP[ ]'c ]'s k3f
+    /* r49: FASC:FADD2[ FLIP ]'c -> FASC:FADD2:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD2[ FLIP ]'c -> FASC:FADD2:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r50 : FASC : FADD2 : FLIP[ ]'c → FASC : FADD2[ FLIP ]'c k3r */
-        [FASC : FADD2 : FLIP[ ]'c → FASC : FADD2[ FLIP ]'c ]'s k3r
+    /* r50: FASC:FADD2:FLIP[ ]'c -> FASC:FADD2[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD2:FLIP[ ]'c -> FASC:FADD2[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r51 : FASC : FADD2 : CASP8[ CASP8 ]'c → FASC : FADD2 : CASP82[ ]'c k3f */
-        [FASC : FADD2 : CASP8[ CASP8 ]'c → FASC : FADD2 : CASP82[ ]'c ]'s k3f
+    /* r51: FASC:FADD2:CASP8[ CASP8 ]'c -> FASC:FADD2:CASP82[ ]'c @ sc=k3f */
+        [FASC:FADD2:CASP8[ CASP8 ]'c -> FASC:FADD2:CASP82[ ]'c ]'s @ sc=k3f;
 
-    /* r52 : FASC : FADD2 : CASP82[ ]'c → FASC : FADD2 : CASP8[ CASP8 ]'c k3r */
-        [FASC : FADD2 : CASP82[ ]'c → FASC : FADD2 : CASP8[ CASP8 ]'c ]'s k3r
+    /* r52: FASC:FADD2:CASP82[ ]'c -> FASC:FADD2:CASP8[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD2:CASP82[ ]'c -> FASC:FADD2:CASP8[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r53 : FASC : FADD2 : CASP8[ FLIP ]'c → FASC : FADD2 : CASP8 : FLIP[ ]'c k3f */
-        [FASC : FADD2 : CASP8[ FLIP ]'c → FASC : FADD2 : CASP8 : FLIP[ ]'c ]'s k3f
+    /* r53: FASC:FADD2:CASP8[ FLIP ]'c -> FASC:FADD2:CASP8:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD2:CASP8[ FLIP ]'c -> FASC:FADD2:CASP8:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r54 : FASC : FADD2 : CASP8 : FLIP[ ]'c → FASC : FADD2 : CASP8[ FLIP ]'c k3r */
-        [FASC : FADD2 : CASP8 : FLIP[ ]'c → FASC : FADD2 : CASP8[ FLIP ]'c ]'s k3r
+    /* r54: FASC:FADD2:CASP8:FLIP[ ]'c -> FASC:FADD2:CASP8[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD2:CASP8:FLIP[ ]'c -> FASC:FADD2:CASP8[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r55 : FASC : FADD2 : FLIP[ CASP8 ]'c → FASC : FADD2 : CASP8 : FLIP[ ]'c k3f */
-        [FASC : FADD2 : FLIP[ CASP8 ]'c → FASC : FADD2 : CASP8 : FLIP[ ]'c ]'s k3f
+    /* r55: FASC:FADD2:FLIP[ CASP8 ]'c -> FASC:FADD2:CASP8:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD2:FLIP[ CASP8 ]'c -> FASC:FADD2:CASP8:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r56 : FASC : FADD2 : CASP8 : FLIP[ ]'c → FASC : FADD2 : FLIP[ CASP8 ]'c k3r */
-        [FASC : FADD2 : CASP8 : FLIP[ ]'c → FASC : FADD2 : FLIP[ CASP8 ]'c ]'s k3r
+    /* r56: FASC:FADD2:CASP8:FLIP[ ]'c -> FASC:FADD2:FLIP[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD2:CASP8:FLIP[ ]'c -> FASC:FADD2:FLIP[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r57 : FASC : FADD2 : FLIP[ FLIP ]'c → FASC : FADD2 : FLIP2[ ]'c k3f */
-        [FASC : FADD2 : FLIP[ FLIP ]'c → FASC : FADD2 : FLIP2[ ]'c ]'s k3f
+    /* r57: FASC:FADD2:FLIP[ FLIP ]'c -> FASC:FADD2:FLIP2[ ]'c @ sc=k3f */
+        [FASC:FADD2:FLIP[ FLIP ]'c -> FASC:FADD2:FLIP2[ ]'c ]'s @ sc=k3f;
 
-    /* r58 : FASC : FADD2 : FLIP2[ ]'c → FASC : FADD2 : FLIP[ FLIP ]'c k3r */
-        [FASC : FADD2 : FLIP2[ ]'c → FASC : FADD2 : FLIP[ FLIP ]'c ]'s k3r
+    /* r58: FASC:FADD2:FLIP2[ ]'c -> FASC:FADD2:FLIP[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD2:FLIP2[ ]'c -> FASC:FADD2:FLIP[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r59 : FASC : FADD[ CASP8 ]'c → FASC : FADD : CASP8[ ]'c k3f */
-        [FASC : FADD[ CASP8 ]'c → FASC : FADD : CASP8[ ]'c ]'s k3f
+    /* r59: FASC:FADD[ CASP8 ]'c -> FASC:FADD:CASP8[ ]'c @ sc=k3f */
+        [FASC:FADD[ CASP8 ]'c -> FASC:FADD:CASP8[ ]'c ]'s @ sc=k3f;
 
-    /* r60 : FASC : FADD : CASP8[ ]'c → FASC : FADD[ CASP8 ]'c k3r */
-        [FASC : FADD : CASP8[ ]'c → FASC : FADD[ CASP8 ]'c ]'s k3r
+    /* r60: FASC:FADD:CASP8[ ]'c -> FASC:FADD[ CASP8 ]'c @ sc=k3r */
+        [FASC:FADD:CASP8[ ]'c -> FASC:FADD[ CASP8 ]'c ]'s @ sc=k3r;
 
-    /* r61 : FASC : FADD[ FLIP ]'c → FASC : FADD : FLIP[ ]'c k3f */
-        [FASC : FADD[ FLIP ]'c → FASC : FADD : FLIP[ ]'c ]'s k3f
+    /* r61: FASC:FADD[ FLIP ]'c -> FASC:FADD:FLIP[ ]'c @ sc=k3f */
+        [FASC:FADD[ FLIP ]'c -> FASC:FADD:FLIP[ ]'c ]'s @ sc=k3f;
 
-    /* r62 : FASC : FADD : FLIP[ ]'c → FASC : FADD[ FLIP ]'c k3r */
-        [FASC : FADD : FLIP[ ]'c → FASC : FADD[ FLIP ]'c ]'s k3r
+    /* r62: FASC:FADD:FLIP[ ]'c -> FASC:FADD[ FLIP ]'c @ sc=k3r */
+        [FASC:FADD:FLIP[ ]'c -> FASC:FADD[ FLIP ]'c ]'s @ sc=k3r;
 
-    /* r63 : FASC : FADD2 : CASP82[ ]'c → FASC : FADD2[ CASP8P41 2 ]'c k4 */
-        [FASC : FADD2 : CASP82[ ]'c → FASC : FADD2[ CASP8P41 2 ]'c ]'s k4
+    /* r63: FASC:FADD2:CASP82[ ]'c -> FASC:FADD2[ CASP8P41 2 ]'c @ sc=k4 */
+        [FASC:FADD2:CASP82[ ]'c -> FASC:FADD2[ CASP8P41 2 ]'c ]'s @ sc=k4;
 
-    /* r64 : FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP8[ CASP8P41 2 ]'c k4 */
-        [FASC : FADD3 : CASP83[ ]'c → FASC : FADD3 : CASP8[ CASP8P41 2 ]'c ]'s k4
+    /* r64: FASC:FADD3:CASP83[ ]'c -> FASC:FADD3:CASP8[ CASP8P41 2 ]'c @ sc=k4 */
+        [FASC:FADD3:CASP83[ ]'c -> FASC:FADD3:CASP8[ CASP8P41 2 ]'c ]'s @ sc=k4;
 
-    /* r65 : FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8P41 2 ]'c k4 */
-        [FASC : FADD3 : CASP82 : FLIP[ ]'c → FASC : FADD3 : FLIP[ CASP8P41 2 ]'c ]'s k4
+    /* r65: FASC:FADD3:CASP82:FLIP[ ]'c -> FASC:FADD3:FLIP[ CASP8P41 2 ]'c @ sc=k4 */
+        [FASC:FADD3:CASP82:FLIP[ ]'c -> FASC:FADD3:FLIP[ CASP8P41 2 ]'c ]'s @ sc=k4;
 
-    /* r66 : FASC : FADD3 : CASP82[ ]'c → FASC : FADD3[ CASP8P41 2 ]'c k4 */
-        [FASC : FADD3 : CASP82[ ]'c → FASC : FADD3[ CASP8P41 2 ]'c ]'s k4
+    /* r66: FASC:FADD3:CASP82[ ]'c -> FASC:FADD3[ CASP8P41 2 ]'c @ sc=k4 */
+        [FASC:FADD3:CASP82[ ]'c -> FASC:FADD3[ CASP8P41 2 ]'c ]'s @ sc=k4;
 
 
     /* EVOLUTION IN C */
-    /* r67 : [ CASP8P41 2 ]'c → [ CASP8∗2 ]'c k5 */
-        [ CASP8P41 2 → CASP8∗2 ]'c k5
+    /* r67: [ CASP8P41 2 ]'c -> [ CASP8∗2 ]'c @ sc=k5 */
+        [ CASP8P41 2 -> CASP8∗2 ]'c @ sc=k5;
 
-    /* r68 : [ CASP8∗2 , CASP3 ]'c → [ CASP8∗2 : CASP3 ]'c k6f */
-        [ CASP8∗2 , CASP3 → CASP8∗2 : CASP3 ]'c k6f
+    /* r68: [ CASP8∗2 , CASP3 ]'c -> [ CASP8∗2:CASP3 ]'c @ sc=k6f */
+        [ CASP8∗2 , CASP3 -> CASP8∗2:CASP3 ]'c @ sc=k6f;
 
-    /* r69 : [ CASP8∗2 : CASP3 ]'c → [ CASP8∗2 , CASP3 ]'c k6r */
-        [ CASP8∗2 : CASP3 → CASP8∗2 , CASP3 ]'c k6r
+    /* r69: [ CASP8∗2:CASP3 ]'c -> [ CASP8∗2 , CASP3 ]'c @ sc=k6r */
+        [ CASP8∗2:CASP3 -> CASP8∗2 , CASP3 ]'c @ sc=k6r;
 
-    /* r70 : [ CASP8∗2 , CASP3∗ ]'c → [ CASP8∗2 : CASP3 ]'c k7 */
-        [ CASP8∗2 , CASP3∗ → CASP8∗2 : CASP3 ]'c k7
+    /* r70: [ CASP8∗2 , CASP3∗ ]'c -> [ CASP8∗2:CASP3 ]'c @ sc=k7 */
+        [ CASP8∗2 , CASP3∗ -> CASP8∗2:CASP3 ]'c @ sc=k7;
 
-    /* r71 : [ CASP8∗2, Bid ]'c → [ CASP8∗2: Bid ]'c k8f */
-        [ CASP8∗2, Bid → CASP8∗2: Bid ]'c k8f
+    /* r71: [ CASP8∗2, Bid ]'c -> [ CASP8∗2: Bid ]'c @ sc=k8f */
+        [ CASP8∗2, Bid -> CASP8∗2: Bid ]'c @ sc=k8f;
 
-    /* r72 : [ CASP8∗2: Bid ]'c → [ CASP8∗2, Bid ]'c k8r */
-        [ CASP8∗2: Bid → CASP8∗2, Bid ]'c k8r
+    /* r72: [ CASP8∗2: Bid ]'c -> [ CASP8∗2, Bid ]'c @ sc=k8r */
+        [ CASP8∗2: Bid -> CASP8∗2, Bid ]'c @ sc=k8r;
 
-    /* r73 : [ CASP8∗2, tBid ]'c → [ CASP8∗2: Bid ]'c k7 */
-        [ CASP8∗2, tBid → CASP8∗2: Bid ]'c k7
+    /* r73: [ CASP8∗2, tBid ]'c -> [ CASP8∗2: Bid ]'c @ sc=k7 */
+        [ CASP8∗2, tBid -> CASP8∗2: Bid ]'c @ sc=k7;
 
-    /* r74 : [ tBid, Bax ]'c → [ tBid : Bax ]'c k9f */
-        [ tBid, Bax → tBid : Bax ]'c k9f
+    /* r74: [ tBid, Bax ]'c -> [ tBid:Bax ]'c @ sc=k9f */
+        [ tBid, Bax -> tBid:Bax ]'c @ sc=k9f;
 
-    /* r75 : [ tBid : Bax ]'c → [ tBid, Bax ]'c k9r */
-        [ tBid : Bax → tBid, Bax ]'c k9r
+    /* r75: [ tBid:Bax ]'c -> [ tBid, Bax ]'c @ sc=k9r */
+        [ tBid:Bax -> tBid, Bax ]'c @ sc=k9r;
 
-    /* r76 : [ tBid : Bax, Bax ]'c → [ tBid : Bax2 ]'c k9f */
-        [ tBid : Bax, Bax → tBid : Bax2 ]'c k9f
+    /* r76: [ tBid:Bax, Bax ]'c -> [ tBid:Bax2 ]'c @ sc=k9f */
+        [ tBid:Bax, Bax -> tBid:Bax2 ]'c @ sc=k9f;
 
-    /* r77 : [ tBid : Bax2 ]'c → [ tBid : Bax, Bax ]'c k9r */
-        [ tBid : Bax2 → tBid : Bax, Bax ]'c k9r
+    /* r77: [ tBid:Bax2 ]'c -> [ tBid:Bax, Bax ]'c @ sc=k9r */
+        [ tBid:Bax2 -> tBid:Bax, Bax ]'c @ sc=k9r;
 
 
     /* m */
-    /* r78 : tBid : Bax2[ Smac ]'m → Smac∗[ ]'m k10 */
-        [tBid : Bax2[ Smac ]'m → Smac∗[ ]'m ]'c k10
+    /* r78: tBid:Bax2[ Smac ]'m -> Smac∗[ ]'m @ sc=k10 */
+        [tBid:Bax2[ Smac ]'m -> Smac∗[ ]'m ]'c @ sc=k10;
 
-    /* r79 : tBid : Bax2[ Cyto.c ]'m → Cyto.c∗[ ]'m k10 */
-        [tBid : Bax2[ Cyto.c ]'m → Cyto.c∗[ ]'m ]'c k10
-    /* */
+    /* r79: tBid:Bax2[ Cyto.c ]'m -> Cyto.c∗[ ]'m @ sc=k10 */
+        [tBid:Bax2[ Cyto.c ]'m -> Cyto.c∗[ ]'m ]'c @ sc=k10;
 
 
     /* EVOLUTION IN C AGAIN */
-    /* r80 : [ Smac∗, XIAP ]'c → [ Smac∗ : XIAP ]'c k11f */
-        [ Smac∗, XIAP → Smac∗ : XIAP ]'c k11f
+    /* r80: [ Smac∗, XIAP ]'c -> [ Smac∗:XIAP ]'c @ sc=k11f */
+        [ Smac∗, XIAP -> Smac∗:XIAP ]'c @ sc=k11f;
 
-    /* r81 : [ Smac∗ : XIAP ]'c → [ Smac∗, XIAP ]'c k11r */
-        [ Smac∗ : XIAP → Smac∗, XIAP ]'c k11r
+    /* r81: [ Smac∗:XIAP ]'c -> [ Smac∗, XIAP ]'c @ sc=k11r */
+        [ Smac∗:XIAP -> Smac∗, XIAP ]'c @ sc=k11r;
 
-    /* r82 : [ Cyto.c∗, Apaf ]'c → [ Cyto.c∗ : Apaf : ATP ]'c k12f */
-        [ Cyto.c∗, Apaf → Cyto.c∗ : Apaf : ATP ]'c k12f
+    /* r82: [ Cyto.c∗, Apaf ]'c -> [ Cyto.c∗:Apaf:ATP ]'c @ sc=k12f */
+        [ Cyto.c∗, Apaf -> Cyto.c∗:Apaf:ATP ]'c @ sc=k12f;
 
-    /* r83 : [ Cyto.c∗ : Apaf : ATP ]'c → [ Cyto.c∗, Apaf ]'c k12r */
-        [ Cyto.c∗ : Apaf : ATP → Cyto.c∗, Apaf ]'c k12r
+    /* r83: [ Cyto.c∗:Apaf:ATP ]'c -> [ Cyto.c∗, Apaf ]'c @ sc=k12r */
+        [ Cyto.c∗:Apaf:ATP -> Cyto.c∗, Apaf ]'c @ sc=k12r;
 
-    /* r84 : [ Cyto.c∗ : Apaf : ATP, CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9 ]'c k13f */
-        [ Cyto.c∗ : Apaf : ATP, CASP9 → Cyto.c∗ : Apaf : ATP : CASP9 ]'c k13f
+    /* r84: [ Cyto.c∗:Apaf:ATP, CASP9 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP9 ]'c @ sc=k13f */
+        [ Cyto.c∗:Apaf:ATP, CASP9 -> Cyto.c∗:Apaf:ATP:CASP9 ]'c @ sc=k13f;
 
-    /* r85 : [ Cyto.c∗ : Apaf : ATP : CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP, CASP9 ]'c k13r */
-        [ Cyto.c∗ : Apaf : ATP : CASP9 → Cyto.c∗ : Apaf : ATP, CASP9 ]'c k13r
+    /* r85: [ Cyto.c∗:Apaf:ATP:CASP9 ]'c -> [ Cyto.c∗:Apaf:ATP, CASP9 ]'c @ sc=k13r */
+        [ Cyto.c∗:Apaf:ATP:CASP9 -> Cyto.c∗:Apaf:ATP, CASP9 ]'c @ sc=k13r;
 
-    /* r86 : [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c k14f */
-        [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 → Cyto.c∗ : Apaf : ATP : CASP92 ]'c k14f
+    /* r86: [ Cyto.c∗:Apaf:ATP:CASP9, CASP9 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP92 ]'c @ sc=k14f */
+        [ Cyto.c∗:Apaf:ATP:CASP9, CASP9 -> Cyto.c∗:Apaf:ATP:CASP92 ]'c @ sc=k14f;
 
-    /* r87 : [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c k14r */
-        [ Cyto.c∗ : Apaf : ATP : CASP92 → Cyto.c∗ : Apaf : ATP : CASP9, CASP9 ]'c k14r
+    /* r87: [ Cyto.c∗:Apaf:ATP:CASP92 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP9, CASP9 ]'c @ sc=k14r */
+        [ Cyto.c∗:Apaf:ATP:CASP92 -> Cyto.c∗:Apaf:ATP:CASP9, CASP9 ]'c @ sc=k14r;
 
-    /* r88 : [ Cyto.c∗ : Apaf : ATP : CASP92 ]'c → [ Cyto.c∗ : Apaf : ATP : CASP9, CASP9∗ ]'c k15 */
-        [ Cyto.c∗ : Apaf : ATP : CASP92 → Cyto.c∗ : Apaf : ATP : CASP9, CASP9∗ ]'c k15
+    /* r88: [ Cyto.c∗:Apaf:ATP:CASP92 ]'c -> [ Cyto.c∗:Apaf:ATP:CASP9, CASP9∗ ]'c @ sc=k15 */
+        [ Cyto.c∗:Apaf:ATP:CASP92 -> Cyto.c∗:Apaf:ATP:CASP9, CASP9∗ ]'c @ sc=k15;
 
-    /* r89 : [ CASP9∗, CASP3 ]'c → [ CASP9∗ : CASP3 ]'c k16f */
-        [ CASP9∗, CASP3 → CASP9∗ : CASP3 ]'c k16f
+    /* r89: [ CASP9∗, CASP3 ]'c -> [ CASP9∗:CASP3 ]'c @ sc=k16f */
+        [ CASP9∗, CASP3 -> CASP9∗:CASP3 ]'c @ sc=k16f;
 
-    /* r90 : [ CASP9∗ : CASP3 ]'c → [ CASP9∗, CASP3 ]'c k16r */
-        [ CASP9∗ : CASP3 → CASP9∗, CASP3 ]'c k16r
+    /* r90: [ CASP9∗:CASP3 ]'c -> [ CASP9∗, CASP3 ]'c @ sc=k16r */
+        [ CASP9∗:CASP3 -> CASP9∗, CASP3 ]'c @ sc=k16r;
 
-    /* r91 : [ CASP9∗ : CASP3 ]'c → [ CASP9∗, CASP3∗ ]'c k17 */
-        [ CASP9∗ : CASP3 → CASP9∗, CASP3∗ ]'c k17
+    /* r91: [ CASP9∗:CASP3 ]'c -> [ CASP9∗, CASP3∗ ]'c @ sc=k17 */
+        [ CASP9∗:CASP3 -> CASP9∗, CASP3∗ ]'c @ sc=k17;
 
-    /* r92 : [ CASP9, XIAP ]'c → [ CASP9 : XIAP ]'c k18f */
-        [ CASP9, XIAP → CASP9 : XIAP ]'c k18f
+    /* r92: [ CASP9, XIAP ]'c -> [ CASP9:XIAP ]'c @ sc=k18f */
+        [ CASP9, XIAP -> CASP9:XIAP ]'c @ sc=k18f;
 
-    /* r93 : [ CASP9 : XIAP ]'c → [ CASP9, XIAP ]'c k18r */
-        [ CASP9 : XIAP → CASP9, XIAP ]'c k18r
+    /* r93: [ CASP9:XIAP ]'c -> [ CASP9, XIAP ]'c @ sc=k18r */
+        [ CASP9:XIAP -> CASP9, XIAP ]'c @ sc=k18r;
 
-    /* r94 : [ CASP3∗, XIAP ]'c → [ CASP3∗ : XIAP ]'c k19f */
-        [ CASP3∗, XIAP → CASP3∗ : XIAP ]'c k19f
+    /* r94: [ CASP3∗, XIAP ]'c -> [ CASP3∗:XIAP ]'c @ sc=k19f */
+        [ CASP3∗, XIAP -> CASP3∗:XIAP ]'c @ sc=k19f;
 
-    /* r95 : [ CASP3∗ : XIAP ]'c → [ CASP3∗, XIAP ]'c k19r */
-        [ CASP3∗ : XIAP → CASP3∗, XIAP ]'c k19r
+    /* r95: [ CASP3∗:XIAP ]'c -> [ CASP3∗, XIAP ]'c @ sc=k19r */
+        [ CASP3∗:XIAP -> CASP3∗, XIAP ]'c @ sc=k19r;
 
 
     /* m */
-    /* r96 : Bax[ Bcl2 ]'m → [ Bcl2 : Bax ]'m k20f */
-        [Bax[ Bcl2 ]'m → [ Bcl2 : Bax ]'m ]'c k20f
+    /* r96: Bax[ Bcl2 ]'m -> [ Bcl2:Bax ]'m @ sc=k20f */
+        [Bax[ Bcl2 ]'m -> [ Bcl2:Bax ]'m ]'c @ sc=k20f;
 
-    /* r97 : [ Bcl2 : Bax ]'m → Bax[ Bcl2 ]'m k20r */
-        [ Bcl2 : Bax ]'m → Bax[ Bcl2 ]'m ]'c k20r
+    /* r97: [ Bcl2:Bax ]'m -> Bax [ Bcl2 ]'m @ sc=k20r */
+        [ Bcl2:Bax ]'m -> Bax[ Bcl2 ]'m ]'c @ sc=k20r;
 
-    /* r960 : Bid[ Bcl2 ]'m → [ Bcl2 : Bid ]'m k20f */
-        [Bid[ Bcl2 ]'m → [ Bcl2 : Bid ]'m ]'c k20f
+    /* r960: Bid[ Bcl2 ]'m -> [ Bcl2:Bid ]'m @ sc=k20f */
+        [Bid[ Bcl2 ]'m -> [ Bcl2:Bid ]'m ]'c @ sc=k20f;
 
-    /* r970 : [ Bcl2 : Bid ]'m → Bid[ Bcl2 ]'m k20r */
-        [[ Bcl2 : Bid ]'m → Bid[ Bcl2 ]'m ]'c k20r
+    /* r970: [ Bcl2:Bid ]'m -> Bid[ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2:Bid ]'m -> Bid[ Bcl2 ]'m ]'c @ sc=k20r;
 
-    /* r9600 : tBid[ Bcl2 ]'m → [ Bcl2 : tBid ]'m k20f */
-        [tBid[ Bcl2 ]'m → [ Bcl2 : tBid ]'m ]'c k20f
+    /* r9600: tBid[ Bcl2 ]'m -> [ Bcl2:tBid ]'m @ sc=k20f */
+        [tBid[ Bcl2 ]'m -> [ Bcl2:tBid ]'m ]'c @ sc=k20f;
 
-    /* r9700 : [ Bcl2 : tBid ]'m → tBid[ Bcl2 ]'m k20r */
-        [[ Bcl2 : tBid ]'m → tBid[ Bcl2 ]'m ]'c k20r
+    /* r9700: [ Bcl2:tBid ]'m -> tBid[ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2:tBid ]'m -> tBid[ Bcl2 ]'m ]'c @ sc=k20r;
 }

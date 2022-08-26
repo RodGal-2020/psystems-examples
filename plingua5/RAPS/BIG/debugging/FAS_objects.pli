@@ -1,0 +1,16 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_objects.pli -o FAS_objects.xml -f xml */
+
+def main()
+{
+    print("Using model 001 and FAS, both designed for RAPS 0.0.4.20220824\n\n");
+
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+
+	@ms(e) += FASL*12500;
+	@ms(s) += FASR*6023;
+	@ms(c) += FADD*10040, CASP8*20074, FLIP*48786, CASP3*120460, Bid*15057, Bax*50189, XIAP*18069, Apaf*60230, CASP9*12046;
+}

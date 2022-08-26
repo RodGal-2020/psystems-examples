@@ -1,0 +1,10 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_structure.pli -o FAS_structure.xml -f xml */
+
+def main()
+{
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+}

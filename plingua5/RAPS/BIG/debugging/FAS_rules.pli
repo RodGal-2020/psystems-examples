@@ -1,0 +1,362 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_rules.pli -o FAS_rules.xml -f xml */
+
+
+def main()
+{
+    print("Using model 001 and FAS, both designed for RAPS 0.0.4.20220824\n\n");
+
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+
+    print("Setting all constants to 1, as the model cannot sustain non-int_t elements\n\n");
+    /* Constants */
+    k1f = 1;
+    k1r = 1;
+    k2f = 1;
+    k2r = 1;
+    k3f = 1;
+    k3r = 1;
+    k4 = 1;
+    k5 = 1;
+    k6f = 1;
+    k6r = 1;
+    k7 = 1;
+    k8f = 1;
+    k8r = 1;
+    k9f = 1;
+    k9r = 1;
+    k10 = 1;
+    k11f = 1;
+    k11r = 1;
+    k12f = 1;
+    k12r = 1;
+    k13f = 1;
+    k13r = 1;
+    k14f = 1;
+    k14r = 1;
+    k15 = 1;
+    k16f = 1;
+    k16r = 1;
+    k17 = 1;
+    k18f = 1;
+    k18r = 1;
+    k19f = 1;
+    k19r = 1;
+    k20f = 1;
+    k20r = 1;
+
+    /* STANDARD */
+    /* r1_FASL[ FASR ]'s -> [ FASC ]'s @ sc=k1f */
+        [ FASL [ FASR ]'s -> [ FASC ]'s ]'e @ sc=k1f;
+
+    /* r2_[ FASC ]'s -> FASL[ FASC ]'s @ sc=k1r */
+        [ [ FASC ]'s -> FASL[ FASC ]'s ]'e @ sc=k1r;
+
+    /* r3_FASC[ FADD ]'s -> FASC_FADD[ ]'s @ sc=k2f */
+        [ FASC[ FADD ]'c -> FASC_FADD[ ]'c ]'s @ sc=k2f;
+
+    /* r4_FASC_FADD[ ]'c -> FASC[ FADD ]'c @ sc=k2r */
+        [ FASC_FADD[ ]'c -> FASC[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r5_FASC_FADD[ FADD ]'c -> FASC_FADD2[ ]'c @ sc=k2f */
+        [ FASC_FADD[ FADD ]'c -> FASC_FADD2[ ]'c ]'s @ sc=k2f;
+
+    /* r6_FASC_FADD2[ ]'c -> FASC_FADD[ FADD ]'c @ sc=k2r */
+        [ FASC_FADD2[ ]'c -> FASC_FADD[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r7_FASC_FADD2[ FADD ]'c -> FASC_FADD3[ ]'c @ sc=k2f */
+        [FASC_FADD2[ FADD ]'c -> FASC_FADD3[ ]'c ]'s @ sc=k2f;
+
+    /* r8_FASC_FADD3[ ]'c -> FASC_FADD2[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3[ ]'c -> FASC_FADD2[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r9_FASC_FADD2_CASP8[ FADD ]'c -> FASC_FADD3_CASP8[ ]'c @ sc=k2f */
+        [FASC_FADD2_CASP8[ FADD ]'c -> FASC_FADD3_CASP8[ ]'c]'s @ sc=k2f;
+
+    /* r10_FASC_FADD3_CASP8[ ]'c -> FASC_FADD2_CASP8[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3_CASP8[ ]'c -> FASC_FADD2_CASP8[ FADD ]'c]'s @ sc=k2r;
+
+    /* r11_FASC_FADD2_FLIP[ FADD ]'c -> FASC_FADD3_FLIP[ ]'c @ sc=k2f */
+        [FASC_FADD2_FLIP[ FADD ]'c -> FASC_FADD3_FLIP[ ]'c ]'s @ sc=k2f;
+
+    /* r12_FASC_FADD3_FLIP[ ]'c -> FASC_FADD2_FLIP[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3_FLIP[ ]'c -> FASC_FADD2_FLIP[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r13_FASC_FADD2_CASP82[ FADD ]'c -> FASC_FADD3_CASP82[ ]'c @ sc=k2f */
+        [FASC_FADD2_CASP82[ FADD ]'c -> FASC_FADD3_CASP82[ ]'c ]'s @ sc=k2f;
+
+    /* r14_FASC_FADD3_CASP82[ ]'c -> FASC_FADD2_CASP82[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3_CASP82[ ]'c -> FASC_FADD2_CASP82[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r15_FASC_FADD2_CASP8_FLIP[ FADD ]'c -> FASC_FADD3_CASP8_FLIP[ ]'c @ sc=k2f */
+        [FASC_FADD2_CASP8_FLIP[ FADD ]'c -> FASC_FADD3_CASP8_FLIP[ ]'c ]'s @ sc=k2f;
+        
+    /* r16_FASC_FADD3_CASP8_FLIP[ ]'c -> FASC_FADD2_CASP8_FLIP[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3_CASP8_FLIP[ ]'c -> FASC_FADD2_CASP8_FLIP[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r17_FASC_FADD2_FLIP2[ FADD ]'c -> FASC_FADD3_FLIP2[ ]'c @ sc=k2f */
+        [FASC_FADD2_FLIP2[ FADD ]'c -> FASC_FADD3_FLIP2[ ]'c ]'s @ sc=k2f;
+
+    /* r18_FASC_FADD3_FLIP2[ ]'c -> FASC_FADD2_FLIP2[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3_FLIP2[ ]'c -> FASC_FADD2_FLIP2[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r19_FASC_FADD_CASP8[ FADD ]'c -> FASC_FADD2_CASP8[ ]'c @ sc=k2f */
+        [FASC_FADD_CASP8[ FADD ]'c -> FASC_FADD2_CASP8[ ]'c ]'s @ sc=k2f;
+
+    /* r20_FASC_FADD2_CASP8[ ]'c -> FASC_FADD_CASP8[ FADD ]'c @ sc=k2r */
+        [FASC_FADD2_CASP8[ ]'c -> FASC_FADD_CASP8[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r21_FASC_FADD_FLIP[ FADD ]'c -> FASC_FADD2_FLIP[ ]'c @ sc=k2f */
+        [ FASC_FADD_FLIP[ FADD ]'c -> FASC_FADD2_FLIP[ ]'c ]'s @ sc=k2f;
+
+    /* r22_FASC_FADD2_FLIP[ ]'c -> FASC_FADD_FLIP[ FADD ]'c @ sc=k2r */
+        [FASC_FADD2_FLIP[ ]'c -> FASC_FADD_FLIP[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r23_FASC_FADD3[ CASP8 ]'c -> FASC_FADD3_CASP8[ ]'c @ sc=k2f */
+        [ FASC_FADD3[ CASP8 ]'c -> FASC_FADD3_CASP8[ ]'c ]'s @ sc=k2f;
+
+    /* r24_FASC_FADD3_CASP8[ ]'c -> FASC_FADD3[ CASP8 ]'c @ sc=k2r */
+        [FASC_FADD3_CASP8[ ]'c -> FASC_FADD3[ CASP8 ]'c ]'s @ sc=k2r;
+
+    /* r25_FASC_FADD3[ FLIP ]'c -> FASC_FADD3_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD3[ FLIP ]'c -> FASC_FADD3_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r26_FASC_FADD3_FLIP[ ]'c -> FASC_FADD3[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD3_FLIP[ ]'c -> FASC_FADD3[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r27_FASC_FADD3_CASP8[ CASP8 ]'c -> FASC_FADD3_CASP82[ ]'c @ sc=k3f */
+        [FASC_FADD3_CASP8[ CASP8 ]'c -> FASC_FADD3_CASP82[ ]'c ]'s @ sc=k3f;
+
+    /* r28_FASC_FADD3_CASP82[ ]'c -> FASC_FADD3_CASP8[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD3_CASP82[ ]'c -> FASC_FADD3_CASP8[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r29_FASC_FADD3_CASP8[ FLIP ]'c -> FASC_FADD3_CASP8_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD3_CASP8[ FLIP ]'c -> FASC_FADD3_CASP8_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r30_FASC_FADD3_CASP8_FLIP[ ]'c -> FASC_FADD3_CASP8[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD3_CASP8_FLIP[ ]'c -> FASC_FADD3_CASP8[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r31_FASC_FADD3_FLIP[ CASP8 ]'c -> FASC_FADD3_CASP8_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD3_FLIP[ CASP8 ]'c -> FASC_FADD3_CASP8_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r32_FASC_FADD3_CASP8_FLIP[ ]'c -> FASC_FADD3_FLIP[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD3_CASP8_FLIP[ ]'c -> FASC_FADD3_FLIP[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r33_FASC_FADD3_FLIP[ FLIP ]'c -> FASC_FADD3_FLIP2[ ]'c @ sc=k3f */
+        [FASC_FADD3_FLIP[ FLIP ]'c -> FASC_FADD3_FLIP2[ ]'c ]'s @ sc=k3f;
+
+    /* r34_FASC_FADD3_FLIP2[ ]'c -> FASC_FADD3_FLIP[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD3_FLIP2[ ]'c -> FASC_FADD3_FLIP[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r35_FASC_FADD3_CASP82[ CASP8 ]'c -> FASC_FADD3_CASP83[ ]'c @ sc=k3f */
+        [FASC_FADD3_CASP82[ CASP8 ]'c -> FASC_FADD3_CASP83[ ]'c ]'s @ sc=k3f;
+
+    /* r36_FASC_FADD3_CASP83[ ]'c -> FASC_FADD3_CASP82[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD3_CASP83[ ]'c -> FASC_FADD3_CASP82[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r37_FASC_FADD3_CASP82[ FLIP ]'c -> FASC_FADD3_CASP82_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD3_CASP82[ FLIP ]'c -> FASC_FADD3_CASP82_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r38_FASC_FADD3_CASP82_FLIP[ ]'c -> FASC_FADD3_CASP82[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD3_CASP82_FLIP[ ]'c -> FASC_FADD3_CASP82[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r39_FASC_FADD3_CASP8_FLIP[ CASP8 ]'c -> FASC_FADD3_CASP82_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD3_CASP8_FLIP[ CASP8 ]'c -> FASC_FADD3_CASP82_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r40_FASC_FADD3_CASP82_FLIP[ ]'c -> FASC_FADD3_CASP8_FLIP[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD3_CASP82_FLIP[ ]'c -> FASC_FADD3_CASP8_FLIP[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r41_FASC_FADD3_CASP8_FLIP[ FLIP ]'c -> FASC_FADD3_CASP8_FLIP2[ ]'c @ sc=k3f */
+        [FASC_FADD3_CASP8_FLIP[ FLIP ]'c -> FASC_FADD3_CASP8_FLIP2[ ]'c ]'s @ sc=k3f;
+
+    /* r42_FASC_FADD3_CASP8_FLIP2[ ]'c -> FASC_FADD3_CASP8_FLIP[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD3_CASP8_FLIP2[ ]'c -> FASC_FADD3_CASP8_FLIP[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r43_FASC_FADD3_FLIP2[ CASP8 ]'c -> FASC_FADD3_CASP8_FLIP2[ ]'c @ sc=k3f */
+        [FASC_FADD3_FLIP2[ CASP8 ]'c -> FASC_FADD3_CASP8_FLIP2[ ]'c ]'s @ sc=k3f;
+
+    /* r44_FASC_FADD3_CASP8_FLIP2[ ]'c -> FASC_FADD3_FLIP2[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD3_CASP8_FLIP2[ ]'c -> FASC_FADD3_FLIP2[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r45_FASC_FADD3_FLIP2[ FLIP ]'c -> FASC_FADD3_FLIP3[ ]'c @ sc=k3f */
+        [FASC_FADD3_FLIP2[ FLIP ]'c -> FASC_FADD3_FLIP3[ ]'c ]'s @ sc=k3f;
+
+    /* r46_FASC_FADD3_FLIP3[ ]'c -> FASC_FADD3_FLIP2[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD3_FLIP3[ ]'c -> FASC_FADD3_FLIP2[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r47_FASC_FADD2[ CASP8 ]'c -> FASC_FADD2_CASP8[ ]'c @ sc=k3f */
+        [FASC_FADD2[ CASP8 ]'c -> FASC_FADD2_CASP8[ ]'c ]'s @ sc=k3f;
+
+    /* r48_FASC_FADD2_CASP8[ ]'c -> FASC_FADD2[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD2_CASP8[ ]'c -> FASC_FADD2[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r49_FASC_FADD2[ FLIP ]'c -> FASC_FADD2_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD2[ FLIP ]'c -> FASC_FADD2_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r50_FASC_FADD2_FLIP[ ]'c -> FASC_FADD2[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD2_FLIP[ ]'c -> FASC_FADD2[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r51_FASC_FADD2_CASP8[ CASP8 ]'c -> FASC_FADD2_CASP82[ ]'c @ sc=k3f */
+        [FASC_FADD2_CASP8[ CASP8 ]'c -> FASC_FADD2_CASP82[ ]'c ]'s @ sc=k3f;
+
+    /* r52_FASC_FADD2_CASP82[ ]'c -> FASC_FADD2_CASP8[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD2_CASP82[ ]'c -> FASC_FADD2_CASP8[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r53_FASC_FADD2_CASP8[ FLIP ]'c -> FASC_FADD2_CASP8_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD2_CASP8[ FLIP ]'c -> FASC_FADD2_CASP8_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r54_FASC_FADD2_CASP8_FLIP[ ]'c -> FASC_FADD2_CASP8[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD2_CASP8_FLIP[ ]'c -> FASC_FADD2_CASP8[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r55_FASC_FADD2_FLIP[ CASP8 ]'c -> FASC_FADD2_CASP8_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD2_FLIP[ CASP8 ]'c -> FASC_FADD2_CASP8_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r56_FASC_FADD2_CASP8_FLIP[ ]'c -> FASC_FADD2_FLIP[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD2_CASP8_FLIP[ ]'c -> FASC_FADD2_FLIP[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r57_FASC_FADD2_FLIP[ FLIP ]'c -> FASC_FADD2_FLIP2[ ]'c @ sc=k3f */
+        [FASC_FADD2_FLIP[ FLIP ]'c -> FASC_FADD2_FLIP2[ ]'c ]'s @ sc=k3f;
+
+    /* r58_FASC_FADD2_FLIP2[ ]'c -> FASC_FADD2_FLIP[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD2_FLIP2[ ]'c -> FASC_FADD2_FLIP[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r59_FASC_FADD[ CASP8 ]'c -> FASC_FADD_CASP8[ ]'c @ sc=k3f */
+        [FASC_FADD[ CASP8 ]'c -> FASC_FADD_CASP8[ ]'c ]'s @ sc=k3f;
+
+    /* r60_FASC_FADD_CASP8[ ]'c -> FASC_FADD[ CASP8 ]'c @ sc=k3r */
+        [FASC_FADD_CASP8[ ]'c -> FASC_FADD[ CASP8 ]'c ]'s @ sc=k3r;
+
+    /* r61_FASC_FADD[ FLIP ]'c -> FASC_FADD_FLIP[ ]'c @ sc=k3f */
+        [FASC_FADD[ FLIP ]'c -> FASC_FADD_FLIP[ ]'c ]'s @ sc=k3f;
+
+    /* r62_FASC_FADD_FLIP[ ]'c -> FASC_FADD[ FLIP ]'c @ sc=k3r */
+        [FASC_FADD_FLIP[ ]'c -> FASC_FADD[ FLIP ]'c ]'s @ sc=k3r;
+
+    /* r63_FASC_FADD2_CASP82[ ]'c -> FASC_FADD2[ CASP8P41_2 ]'c @ sc=k4 */
+        [FASC_FADD2_CASP82[ ]'c -> FASC_FADD2[ CASP8P41_2 ]'c ]'s @ sc=k4;
+
+    /* r64_FASC_FADD3_CASP83[ ]'c -> FASC_FADD3_CASP8[ CASP8P41_2 ]'c @ sc=k4 */
+        [FASC_FADD3_CASP83[ ]'c -> FASC_FADD3_CASP8[ CASP8P41_2 ]'c ]'s @ sc=k4;
+
+    /* r65_FASC_FADD3_CASP82_FLIP[ ]'c -> FASC_FADD3_FLIP[ CASP8P41_2 ]'c @ sc=k4 */
+        [FASC_FADD3_CASP82_FLIP[ ]'c -> FASC_FADD3_FLIP[ CASP8P41_2 ]'c ]'s @ sc=k4;
+
+    /* r66_FASC_FADD3_CASP82[ ]'c -> FASC_FADD3[ CASP8P41_2 ]'c @ sc=k4 */
+        [FASC_FADD3_CASP82[ ]'c -> FASC_FADD3[ CASP8P41_2 ]'c ]'s @ sc=k4;
+
+
+    /* EVOLUTION IN C */
+    /* r67_[ CASP8P41_2 ]'c -> [ CASP8x2 ]'c @ sc=k5 */
+        [ CASP8P41_2 -> CASP8x2 ]'c @ sc=k5;
+
+    /* r68_[ CASP8x2 , CASP3 ]'c -> [ CASP8x2_CASP3 ]'c @ sc=k6f */
+        [ CASP8x2 , CASP3 -> CASP8x2_CASP3 ]'c @ sc=k6f;
+
+    /* r69_[ CASP8x2_CASP3 ]'c -> [ CASP8x2 , CASP3 ]'c @ sc=k6r */
+        [ CASP8x2_CASP3 -> CASP8x2 , CASP3 ]'c @ sc=k6r;
+
+    /* r70_[ CASP8x2 , CASP3x ]'c -> [ CASP8x2_CASP3 ]'c @ sc=k7 */
+        [ CASP8x2 , CASP3x -> CASP8x2_CASP3 ]'c @ sc=k7;
+
+    /* r71_[ CASP8x2, Bid ]'c -> [ CASP8x2_Bid ]'c @ sc=k8f */
+        [ CASP8x2, Bid -> CASP8x2_Bid ]'c @ sc=k8f;
+
+    /* r72_[ CASP8x2_Bid ]'c -> [ CASP8x2, Bid ]'c @ sc=k8r */
+        [ CASP8x2_Bid -> CASP8x2, Bid ]'c @ sc=k8r;
+
+    /* r73_[ CASP8x2, tBid ]'c -> [ CASP8x2_Bid ]'c @ sc=k7 */
+        [ CASP8x2, tBid -> CASP8x2_Bid ]'c @ sc=k7;
+
+    /* r74_[ tBid, Bax ]'c -> [ tBid_Bax ]'c @ sc=k9f */
+        [ tBid, Bax -> tBid_Bax ]'c @ sc=k9f;
+
+    /* r75_[ tBid_Bax ]'c -> [ tBid, Bax ]'c @ sc=k9r */
+        [ tBid_Bax -> tBid, Bax ]'c @ sc=k9r;
+
+    /* r76_[ tBid_Bax, Bax ]'c -> [ tBid_Bax2 ]'c @ sc=k9f */
+        [ tBid_Bax, Bax -> tBid_Bax2 ]'c @ sc=k9f;
+
+    /* r77_[ tBid_Bax2 ]'c -> [ tBid_Bax, Bax ]'c @ sc=k9r */
+        [ tBid_Bax2 -> tBid_Bax, Bax ]'c @ sc=k9r;
+
+
+    /* m */
+    /* r78_tBid_Bax2[ Smac ]'m -> Smacx[ ]'m @ sc=k10 */
+        [tBid_Bax2[ Smac ]'m -> Smacx[ ]'m ]'c @ sc=k10;
+
+    /* r79_tBid_Bax2[ Cyto.c ]'m -> Cyto.cx[ ]'m @ sc=k10 */
+        [tBid_Bax2[ Cyto.c ]'m -> Cyto.cx[ ]'m ]'c @ sc=k10;
+
+
+    /* EVOLUTION IN C AGAIN */
+    /* r80_[ Smacx, XIAP ]'c -> [ Smacx_XIAP ]'c @ sc=k11f */
+        [ Smacx, XIAP -> Smacx_XIAP ]'c @ sc=k11f;
+
+    /* r81_[ Smacx_XIAP ]'c -> [ Smacx, XIAP ]'c @ sc=k11r */
+        [ Smacx_XIAP -> Smacx, XIAP ]'c @ sc=k11r;
+
+    /* r82_[ Cyto.cx, Apaf ]'c -> [ Cyto.cx_Apaf_ATP ]'c @ sc=k12f */
+        [ Cyto.cx, Apaf -> Cyto.cx_Apaf_ATP ]'c @ sc=k12f;
+
+    /* r83_[ Cyto.cx_Apaf_ATP ]'c -> [ Cyto.cx, Apaf ]'c @ sc=k12r */
+        [ Cyto.cx_Apaf_ATP -> Cyto.cx, Apaf ]'c @ sc=k12r;
+
+    /* r84_[ Cyto.cx_Apaf_ATP, CASP9 ]'c -> [ Cyto.cx_Apaf_ATP_CASP9 ]'c @ sc=k13f */
+        [ Cyto.cx_Apaf_ATP, CASP9 -> Cyto.cx_Apaf_ATP_CASP9 ]'c @ sc=k13f;
+
+    /* r85_[ Cyto.cx_Apaf_ATP_CASP9 ]'c -> [ Cyto.cx_Apaf_ATP, CASP9 ]'c @ sc=k13r */
+        [ Cyto.cx_Apaf_ATP_CASP9 -> Cyto.cx_Apaf_ATP, CASP9 ]'c @ sc=k13r;
+
+    /* r86_[ Cyto.cx_Apaf_ATP_CASP9, CASP9 ]'c -> [ Cyto.cx_Apaf_ATP_CASP92 ]'c @ sc=k14f */
+        [ Cyto.cx_Apaf_ATP_CASP9, CASP9 -> Cyto.cx_Apaf_ATP_CASP92 ]'c @ sc=k14f;
+
+    /* r87_[ Cyto.cx_Apaf_ATP_CASP92 ]'c -> [ Cyto.cx_Apaf_ATP_CASP9, CASP9 ]'c @ sc=k14r */
+        [ Cyto.cx_Apaf_ATP_CASP92 -> Cyto.cx_Apaf_ATP_CASP9, CASP9 ]'c @ sc=k14r;
+
+    /* r88_[ Cyto.cx_Apaf_ATP_CASP92 ]'c -> [ Cyto.cx_Apaf_ATP_CASP9, CASP9x ]'c @ sc=k15 */
+        [ Cyto.cx_Apaf_ATP_CASP92 -> Cyto.cx_Apaf_ATP_CASP9, CASP9x ]'c @ sc=k15;
+
+    /* r89_[ CASP9x, CASP3 ]'c -> [ CASP9x_CASP3 ]'c @ sc=k16f */
+        [ CASP9x, CASP3 -> CASP9x_CASP3 ]'c @ sc=k16f;
+
+    /* r90_[ CASP9x_CASP3 ]'c -> [ CASP9x, CASP3 ]'c @ sc=k16r */
+        [ CASP9x_CASP3 -> CASP9x, CASP3 ]'c @ sc=k16r;
+
+    /* r91_[ CASP9x_CASP3 ]'c -> [ CASP9x, CASP3x ]'c @ sc=k17 */
+        [ CASP9x_CASP3 -> CASP9x, CASP3x ]'c @ sc=k17;
+
+    /* r92_[ CASP9, XIAP ]'c -> [ CASP9_XIAP ]'c @ sc=k18f */
+        [ CASP9, XIAP -> CASP9_XIAP ]'c @ sc=k18f;
+
+    /* r93_[ CASP9_XIAP ]'c -> [ CASP9, XIAP ]'c @ sc=k18r */
+        [ CASP9_XIAP -> CASP9, XIAP ]'c @ sc=k18r;
+
+    /* r94_[ CASP3x, XIAP ]'c -> [ CASP3x_XIAP ]'c @ sc=k19f */
+        [ CASP3x, XIAP -> CASP3x_XIAP ]'c @ sc=k19f;
+
+    /* r95_[ CASP3x_XIAP ]'c -> [ CASP3x, XIAP ]'c @ sc=k19r */
+        [ CASP3x_XIAP -> CASP3x, XIAP ]'c @ sc=k19r;
+
+
+    /* m */
+    /* r96_Bax[ Bcl2 ]'m -> [ Bcl2_Bax ]'m @ sc=k20f */
+        [Bax[ Bcl2 ]'m -> [ Bcl2_Bax ]'m ]'c @ sc=k20f;
+
+    /* r97_[ Bcl2_Bax ]'m -> Bax [ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2_Bax ]'m -> Bax[ Bcl2 ]'m ]'c @ sc=k20r;
+
+    /* r960_Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m @ sc=k20f */
+        [Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m ]'c @ sc=k20f;
+
+    /* r970_[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m ]'c @ sc=k20r;
+
+    /* r9600_tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m @ sc=k20f */
+        [tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m ]'c @ sc=k20f;
+
+    /* r9700_[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m ]'c @ sc=k20r;
+}

@@ -1,0 +1,7 @@
+/* Designed for RAPS 0.0.3.20220826 */
+
+!stochastic_rule
+{
+  [ u -> v ]'h @ sc(int_t); 
+}
+@model(stochastic) = stochastic_rule;

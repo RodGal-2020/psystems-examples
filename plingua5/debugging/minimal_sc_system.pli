@@ -1,0 +1,29 @@
+@model<stochastic>
+
+/* Using double_t */
+/* @include "minimal_sc_model_double_t.pli" */
+/* plingua minimal_sc_system.pli -o minimal_sc_system_double_t.xml -f xml */
+
+/* Using int_t */
+/* @include "minimal_sc_model_int_t.pli" */
+/* plingua minimal_sc_system.pli -o minimal_sc_system_int_t.xml -f xml */
+
+/* Using long_t */
+/* @include "minimal_sc_model_long_t.pli" */
+/* plingua minimal_sc_system.pli -o minimal_sc_system_long_t.xml -f xml */
+
+/* Using prob_t */
+/* @include "minimal_sc_model_prob_t.pli" */
+/* plingua minimal_sc_system.pli -o minimal_sc_system_prob_t.xml -f xml */
+
+
+def main()
+{
+    print("Using minimal model.\n\n");
+
+    @mu = [ ]'0;
+
+    @ms(0) = a;
+
+    [a -> b]'0 @sc=1;
+}

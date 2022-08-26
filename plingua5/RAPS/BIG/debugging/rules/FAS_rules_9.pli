@@ -1,0 +1,82 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_rules_9.pli -o FAS_rules_9.xml -f xml */
+
+
+def main()
+{
+    print("Using model 001 and FAS, both designed for RAPS 0.0.4.20220824\n\n");
+
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+
+    print("Setting all constants to 1, as the model cannot sustain non-int_t elements\n\n");
+    /* Constants */
+    k1f = 1;
+    k1r = 1;
+    k2f = 1;
+    k2r = 1;
+    k3f = 1;
+    k3r = 1;
+    k4 = 1;
+    k5 = 1;
+    k6f = 1;
+    k6r = 1;
+    k7 = 1;
+    k8f = 1;
+    k8r = 1;
+    k9f = 1;
+    k9r = 1;
+    k10 = 1;
+    k11f = 1;
+    k11r = 1;
+    k12f = 1;
+    k12r = 1;
+    k13f = 1;
+    k13r = 1;
+    k14f = 1;
+    k14r = 1;
+    k15 = 1;
+    k16f = 1;
+    k16r = 1;
+    k17 = 1;
+    k18f = 1;
+    k18r = 1;
+    k19f = 1;
+    k19r = 1;
+    k20f = 1;
+    k20r = 1;
+
+
+    /* r81_[ Smacx_XIAP ]'c -> [ Smacx, XIAP ]'c @ sc=k11r */
+        [ Smacx_XIAP -> Smacx, XIAP ]'c @ sc=k11r;
+
+    /* r82_[ Cyto.cx, Apaf ]'c -> [ Cyto.cx_Apaf_ATP ]'c @ sc=k12f */
+        [ Cyto.cx, Apaf -> Cyto.cx_Apaf_ATP ]'c @ sc=k12f;
+
+    /* r83_[ Cyto.cx_Apaf_ATP ]'c -> [ Cyto.cx, Apaf ]'c @ sc=k12r */
+        [ Cyto.cx_Apaf_ATP -> Cyto.cx, Apaf ]'c @ sc=k12r;
+
+    /* r84_[ Cyto.cx_Apaf_ATP, CASP9 ]'c -> [ Cyto.cx_Apaf_ATP_CASP9 ]'c @ sc=k13f */
+        [ Cyto.cx_Apaf_ATP, CASP9 -> Cyto.cx_Apaf_ATP_CASP9 ]'c @ sc=k13f;
+
+    /* r85_[ Cyto.cx_Apaf_ATP_CASP9 ]'c -> [ Cyto.cx_Apaf_ATP, CASP9 ]'c @ sc=k13r */
+        [ Cyto.cx_Apaf_ATP_CASP9 -> Cyto.cx_Apaf_ATP, CASP9 ]'c @ sc=k13r;
+
+    /* r86_[ Cyto.cx_Apaf_ATP_CASP9, CASP9 ]'c -> [ Cyto.cx_Apaf_ATP_CASP92 ]'c @ sc=k14f */
+        [ Cyto.cx_Apaf_ATP_CASP9, CASP9 -> Cyto.cx_Apaf_ATP_CASP92 ]'c @ sc=k14f;
+
+    /* r87_[ Cyto.cx_Apaf_ATP_CASP92 ]'c -> [ Cyto.cx_Apaf_ATP_CASP9, CASP9 ]'c @ sc=k14r */
+        [ Cyto.cx_Apaf_ATP_CASP92 -> Cyto.cx_Apaf_ATP_CASP9, CASP9 ]'c @ sc=k14r;
+
+    /* r88_[ Cyto.cx_Apaf_ATP_CASP92 ]'c -> [ Cyto.cx_Apaf_ATP_CASP9, CASP9x ]'c @ sc=k15 */
+        [ Cyto.cx_Apaf_ATP_CASP92 -> Cyto.cx_Apaf_ATP_CASP9, CASP9x ]'c @ sc=k15;
+
+    /* r89_[ CASP9x, CASP3 ]'c -> [ CASP9x_CASP3 ]'c @ sc=k16f */
+        [ CASP9x, CASP3 -> CASP9x_CASP3 ]'c @ sc=k16f;
+
+    /* r90_[ CASP9x_CASP3 ]'c -> [ CASP9x, CASP3 ]'c @ sc=k16r */
+        [ CASP9x_CASP3 -> CASP9x, CASP3 ]'c @ sc=k16r;
+
+}

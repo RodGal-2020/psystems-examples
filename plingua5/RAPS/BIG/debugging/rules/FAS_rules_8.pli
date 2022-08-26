@@ -1,0 +1,86 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_rules_8.pli -o FAS_rules_8.xml -f xml */
+
+
+def main()
+{
+    print("Using model 001 and FAS, both designed for RAPS 0.0.4.20220824\n\n");
+
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+
+    print("Setting all constants to 1, as the model cannot sustain non-int_t elements\n\n");
+    /* Constants */
+    k1f = 1;
+    k1r = 1;
+    k2f = 1;
+    k2r = 1;
+    k3f = 1;
+    k3r = 1;
+    k4 = 1;
+    k5 = 1;
+    k6f = 1;
+    k6r = 1;
+    k7 = 1;
+    k8f = 1;
+    k8r = 1;
+    k9f = 1;
+    k9r = 1;
+    k10 = 1;
+    k11f = 1;
+    k11r = 1;
+    k12f = 1;
+    k12r = 1;
+    k13f = 1;
+    k13r = 1;
+    k14f = 1;
+    k14r = 1;
+    k15 = 1;
+    k16f = 1;
+    k16r = 1;
+    k17 = 1;
+    k18f = 1;
+    k18r = 1;
+    k19f = 1;
+    k19r = 1;
+    k20f = 1;
+    k20r = 1;
+
+
+    /* r71_[ CASP8x2, Bid ]'c -> [ CASP8x2_Bid ]'c @ sc=k8f */
+        [ CASP8x2, Bid -> CASP8x2_Bid ]'c @ sc=k8f;
+
+    /* r72_[ CASP8x2_Bid ]'c -> [ CASP8x2, Bid ]'c @ sc=k8r */
+        [ CASP8x2_Bid -> CASP8x2, Bid ]'c @ sc=k8r;
+
+    /* r73_[ CASP8x2, tBid ]'c -> [ CASP8x2_Bid ]'c @ sc=k7 */
+        [ CASP8x2, tBid -> CASP8x2_Bid ]'c @ sc=k7;
+
+    /* r74_[ tBid, Bax ]'c -> [ tBid_Bax ]'c @ sc=k9f */
+        [ tBid, Bax -> tBid_Bax ]'c @ sc=k9f;
+
+    /* r75_[ tBid_Bax ]'c -> [ tBid, Bax ]'c @ sc=k9r */
+        [ tBid_Bax -> tBid, Bax ]'c @ sc=k9r;
+
+    /* r76_[ tBid_Bax, Bax ]'c -> [ tBid_Bax2 ]'c @ sc=k9f */
+        [ tBid_Bax, Bax -> tBid_Bax2 ]'c @ sc=k9f;
+
+    /* r77_[ tBid_Bax2 ]'c -> [ tBid_Bax, Bax ]'c @ sc=k9r */
+        [ tBid_Bax2 -> tBid_Bax, Bax ]'c @ sc=k9r;
+
+
+    /* m */
+    /* r78_tBid_Bax2[ Smac ]'m -> Smacx[ ]'m @ sc=k10 */
+        [tBid_Bax2[ Smac ]'m -> Smacx[ ]'m ]'c @ sc=k10;
+
+    /* r79_tBid_Bax2[ Cyto.c ]'m -> Cyto.cx[ ]'m @ sc=k10 */
+        [tBid_Bax2[ Cyto.c ]'m -> Cyto.cx[ ]'m ]'c @ sc=k10;
+
+
+    /* EVOLUTION IN C AGAIN */
+    /* r80_[ Smacx, XIAP ]'c -> [ Smacx_XIAP ]'c @ sc=k11f */
+        [ Smacx, XIAP -> Smacx_XIAP ]'c @ sc=k11f;
+
+}

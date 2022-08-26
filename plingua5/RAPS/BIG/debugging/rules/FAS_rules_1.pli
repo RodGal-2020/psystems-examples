@@ -1,0 +1,81 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_rules_1.pli -o FAS_rules_1.xml -f xml */
+
+
+def main()
+{
+    print("Using model 001 and FAS, both designed for RAPS 0.0.4.20220824\n\n");
+
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+
+    print("Setting all constants to 1, as the model cannot sustain non-int_t elements\n\n");
+    /* Constants */
+    k1f = 1;
+    k1r = 1;
+    k2f = 1;
+    k2r = 1;
+    k3f = 1;
+    k3r = 1;
+    k4 = 1;
+    k5 = 1;
+    k6f = 1;
+    k6r = 1;
+    k7 = 1;
+    k8f = 1;
+    k8r = 1;
+    k9f = 1;
+    k9r = 1;
+    k10 = 1;
+    k11f = 1;
+    k11r = 1;
+    k12f = 1;
+    k12r = 1;
+    k13f = 1;
+    k13r = 1;
+    k14f = 1;
+    k14r = 1;
+    k15 = 1;
+    k16f = 1;
+    k16r = 1;
+    k17 = 1;
+    k18f = 1;
+    k18r = 1;
+    k19f = 1;
+    k19r = 1;
+    k20f = 1;
+    k20r = 1;
+
+    /* STANDARD */
+    /* r1_FASL[ FASR ]'s -> [ FASC ]'s @ sc=k1f */
+        [ FASL [ FASR ]'s -> [ FASC ]'s ]'e @ sc=k1f;
+
+    /* r2_[ FASC ]'s -> FASL[ FASC ]'s @ sc=k1r */
+        [ [ FASC ]'s -> FASL[ FASC ]'s ]'e @ sc=k1r;
+
+    /* r3_FASC[ FADD ]'s -> FASC_FADD[ ]'s @ sc=k2f */
+        [ FASC[ FADD ]'c -> FASC_FADD[ ]'c ]'s @ sc=k2f;
+
+    /* r4_FASC_FADD[ ]'c -> FASC[ FADD ]'c @ sc=k2r */
+        [ FASC_FADD[ ]'c -> FASC[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r5_FASC_FADD[ FADD ]'c -> FASC_FADD2[ ]'c @ sc=k2f */
+        [ FASC_FADD[ FADD ]'c -> FASC_FADD2[ ]'c ]'s @ sc=k2f;
+
+    /* r6_FASC_FADD2[ ]'c -> FASC_FADD[ FADD ]'c @ sc=k2r */
+        [ FASC_FADD2[ ]'c -> FASC_FADD[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r7_FASC_FADD2[ FADD ]'c -> FASC_FADD3[ ]'c @ sc=k2f */
+        [FASC_FADD2[ FADD ]'c -> FASC_FADD3[ ]'c ]'s @ sc=k2f;
+
+    /* r8_FASC_FADD3[ ]'c -> FASC_FADD2[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3[ ]'c -> FASC_FADD2[ FADD ]'c ]'s @ sc=k2r;
+
+    /* r9_FASC_FADD2_CASP8[ FADD ]'c -> FASC_FADD3_CASP8[ ]'c @ sc=k2f */
+        [FASC_FADD2_CASP8[ FADD ]'c -> FASC_FADD3_CASP8[ ]'c]'s @ sc=k2f;
+
+    /* r10_FASC_FADD3_CASP8[ ]'c -> FASC_FADD2_CASP8[ FADD ]'c @ sc=k2r */
+        [FASC_FADD3_CASP8[ ]'c -> FASC_FADD2_CASP8[ FADD ]'c]'s @ sc=k2r;
+}

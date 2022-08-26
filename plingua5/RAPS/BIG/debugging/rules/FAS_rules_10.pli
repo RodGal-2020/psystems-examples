@@ -1,0 +1,86 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with */ 
+/* plingua FAS_rules_10.pli -o FAS_rules_10.xml -f xml */
+
+
+def main()
+{
+    print("Using model 001 and FAS, both designed for RAPS 0.0.4.20220824\n\n");
+
+    @mu = [ [ [ [ ]'m ]'c ]'s ]'e;
+
+    print("Setting all constants to 1, as the model cannot sustain non-int_t elements\n\n");
+    /* Constants */
+    k1f = 1;
+    k1r = 1;
+    k2f = 1;
+    k2r = 1;
+    k3f = 1;
+    k3r = 1;
+    k4 = 1;
+    k5 = 1;
+    k6f = 1;
+    k6r = 1;
+    k7 = 1;
+    k8f = 1;
+    k8r = 1;
+    k9f = 1;
+    k9r = 1;
+    k10 = 1;
+    k11f = 1;
+    k11r = 1;
+    k12f = 1;
+    k12r = 1;
+    k13f = 1;
+    k13r = 1;
+    k14f = 1;
+    k14r = 1;
+    k15 = 1;
+    k16f = 1;
+    k16r = 1;
+    k17 = 1;
+    k18f = 1;
+    k18r = 1;
+    k19f = 1;
+    k19r = 1;
+    k20f = 1;
+    k20r = 1;
+
+
+    /* r91_[ CASP9x_CASP3 ]'c -> [ CASP9x, CASP3x ]'c @ sc=k17 */
+        [ CASP9x_CASP3 -> CASP9x, CASP3x ]'c @ sc=k17;
+
+    /* r92_[ CASP9, XIAP ]'c -> [ CASP9_XIAP ]'c @ sc=k18f */
+        [ CASP9, XIAP -> CASP9_XIAP ]'c @ sc=k18f;
+
+    /* r93_[ CASP9_XIAP ]'c -> [ CASP9, XIAP ]'c @ sc=k18r */
+        [ CASP9_XIAP -> CASP9, XIAP ]'c @ sc=k18r;
+
+    /* r94_[ CASP3x, XIAP ]'c -> [ CASP3x_XIAP ]'c @ sc=k19f */
+        [ CASP3x, XIAP -> CASP3x_XIAP ]'c @ sc=k19f;
+
+    /* r95_[ CASP3x_XIAP ]'c -> [ CASP3x, XIAP ]'c @ sc=k19r */
+        [ CASP3x_XIAP -> CASP3x, XIAP ]'c @ sc=k19r;
+
+
+    /* m */
+    /* r96_Bax[ Bcl2 ]'m -> [ Bcl2_Bax ]'m @ sc=k20f */
+        [Bax[ Bcl2 ]'m -> [ Bcl2_Bax ]'m ]'c @ sc=k20f;
+
+    /* r97_[ Bcl2_Bax ]'m -> Bax [ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2_Bax ]'m -> Bax[ Bcl2 ]'m ]'c @ sc=k20r;
+
+    /* r960_Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m @ sc=k20f */
+        [Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m ]'c @ sc=k20f;
+
+    /* r970_[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m ]'c @ sc=k20r;
+
+    /* r9600_tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m @ sc=k20f */
+        [tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m ]'c @ sc=k20f;
+
+    /* r9700_[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m @ sc=k20r */
+        [[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m ]'c @ sc=k20r;
+}

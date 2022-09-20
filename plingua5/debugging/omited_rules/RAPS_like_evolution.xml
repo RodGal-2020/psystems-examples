@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<file>
+		<header>P-Lingua output file</header>
+		<version>1.0</version>
+		<psystem>
+			<objects size="dynamic">
+				<value0>NEW</value0>
+				<value1>a</value1>
+				<value2>another_object_in_2</value2>
+				<value3>another_object_in_3</value3>
+				<value4>b</value4>
+				<value5>c</value5>
+				<value6>d</value6>
+				<value7>e</value7>
+				<value8>object_in_2</value8>
+				<value9>object_in_3</value9>
+			</objects>
+			<labels size="dynamic">
+				<value0>0</value0>
+				<value1>1</value1>
+				<value2>2</value2>
+				<value3>3</value3>
+				<value4>4</value4>
+				<value5>5</value5>
+			</labels>
+			<features size="dynamic">
+				<value0>pattern</value0>
+			</features>
+			<strings size="dynamic">
+				<value0>RAPS_like_evolution_rule</value0>
+				<value1>RAPS_nonstandard_crazy_multicommunication</value1>
+				<value2>RAPS_nonstandard_membrane_presence</value2>
+				<value3>RAPS_nonstandard_residual_presence</value3>
+				<value4>skeleton_rule</value4>
+				<value5>standard_evolution_rule</value5>
+				<value6>stochastic</value6>
+			</strings>
+			<max_multiplicity>4</max_multiplicity>
+			<model>
+				<id>6</id>
+			</model>
+			<semantics>
+				<value>0</value>
+				<inf>true</inf>
+				<patterns size="dynamic">
+					<value0>
+						<id>0</id>
+					</value0>
+					<value1>
+						<id>1</id>
+					</value1>
+					<value2>
+						<id>2</id>
+					</value2>
+					<value3>
+						<id>3</id>
+					</value3>
+					<value4>
+						<id>4</id>
+					</value4>
+					<value5>
+						<id>5</id>
+					</value5>
+				</patterns>
+				<children size="dynamic"/>
+			</semantics>
+			<structure>
+				<charge></charge>
+				<label size="dynamic">
+					<value0>
+						<id>0</id>
+					</value0>
+				</label>
+				<children size="dynamic">
+					<value0>
+						<charge></charge>
+						<label size="dynamic">
+							<value0>
+								<id>1</id>
+							</value0>
+						</label>
+						<children size="dynamic"/>
+					</value0>
+					<value1>
+						<charge></charge>
+						<label size="dynamic">
+							<value0>
+								<id>2</id>
+							</value0>
+						</label>
+						<children size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>3</id>
+									</value0>
+								</label>
+								<children size="dynamic"/>
+							</value0>
+							<value1>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>4</id>
+									</value0>
+								</label>
+								<children size="dynamic"/>
+							</value1>
+							<value2>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>5</id>
+									</value0>
+								</label>
+								<children size="dynamic"/>
+							</value2>
+						</children>
+					</value1>
+				</children>
+			</structure>
+			<multisets size="dynamic">
+				<value0>
+					<key size="dynamic">
+						<value0>
+							<id>1</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>1</id>
+							</key>
+							<value>
+								<multiplicity>1</multiplicity>
+							</value>
+						</value0>
+						<value1>
+							<key>
+								<id>4</id>
+							</key>
+							<value>
+								<multiplicity>2</multiplicity>
+							</value>
+						</value1>
+						<value2>
+							<key>
+								<id>5</id>
+							</key>
+							<value>
+								<multiplicity>3</multiplicity>
+							</value>
+						</value2>
+					</value>
+				</value0>
+				<value1>
+					<key size="dynamic">
+						<value0>
+							<id>2</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>2</id>
+							</key>
+							<value>
+								<multiplicity>2</multiplicity>
+							</value>
+						</value0>
+						<value1>
+							<key>
+								<id>8</id>
+							</key>
+							<value>
+								<multiplicity>1</multiplicity>
+							</value>
+						</value1>
+					</value>
+				</value1>
+				<value2>
+					<key size="dynamic">
+						<value0>
+							<id>3</id>
+						</value0>
+					</key>
+					<value size="dynamic">
+						<value0>
+							<key>
+								<id>3</id>
+							</key>
+							<value>
+								<multiplicity>2</multiplicity>
+							</value>
+						</value0>
+						<value1>
+							<key>
+								<id>9</id>
+							</key>
+							<value>
+								<multiplicity>1</multiplicity>
+							</value>
+						</value1>
+					</value>
+				</value2>
+			</multisets>
+			<rules size="dynamic">
+				<value0>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic"/>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value0>
+				<value1>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>0</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value1>
+				<value2>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>4</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value2>
+				<value3>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>4</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+									<value1>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value1>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value3>
+				<value4>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>4</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+									<value1>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value1>
+									<value2>
+										<key>
+											<id>6</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value2>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value4>
+				<value5>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>4</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+									<value1>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>3</multiplicity>
+										</value>
+									</value1>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value5>
+				<value6>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>4</id>
+										</key>
+										<value>
+											<multiplicity>2</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value6>
+				<value7>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+								<value1>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value1>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value7>
+				<value8>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+								<value1>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value1>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+									<value1>
+										<key>
+											<id>6</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value1>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value8>
+				<value9>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+								<value1>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value1>
+								<value2>
+									<key>
+										<id>5</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value2>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+									<value1>
+										<key>
+											<id>6</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value1>
+									<value2>
+										<key>
+											<id>7</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value2>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value9>
+				<value10>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+								<value1>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value1>
+								<value2>
+									<key>
+										<id>5</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value2>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>6</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value10>
+				<value11>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>1</id>
+									</key>
+									<value>
+										<multiplicity>1</multiplicity>
+									</value>
+								</value0>
+								<value1>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>2</multiplicity>
+									</value>
+								</value1>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>3</multiplicity>
+										</value>
+									</value0>
+									<value1>
+										<key>
+											<id>6</id>
+										</key>
+										<value>
+											<multiplicity>4</multiplicity>
+										</value>
+									</value1>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value11>
+				<value12>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>2</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>1</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value12>
+				<value13>
+					<left_hand_rule>
+						<multiset size="dynamic"/>
+						<membrane>
+							<charge></charge>
+							<label size="dynamic">
+								<value0>
+									<id>1</id>
+								</value0>
+							</label>
+							<multiset size="dynamic">
+								<value0>
+									<key>
+										<id>4</id>
+									</key>
+									<value>
+										<multiplicity>2</multiplicity>
+									</value>
+								</value0>
+							</multiset>
+							<children size="dynamic"/>
+						</membrane>
+					</left_hand_rule>
+					<arrow></arrow>
+					<right_hand_rule>
+						<multiset size="dynamic"/>
+						<membranes size="dynamic">
+							<value0>
+								<charge></charge>
+								<label size="dynamic">
+									<value0>
+										<id>1</id>
+									</value0>
+								</label>
+								<multiset size="dynamic">
+									<value0>
+										<key>
+											<id>5</id>
+										</key>
+										<value>
+											<multiplicity>3</multiplicity>
+										</value>
+									</value0>
+								</multiset>
+								<children size="dynamic"/>
+							</value0>
+						</membranes>
+					</right_hand_rule>
+					<features size="dynamic">
+						<value0>
+							<key>
+								<id>0</id>
+							</key>
+							<value>
+								<type>8</type>
+								<id>0</id>
+							</value>
+						</value0>
+					</features>
+				</value13>
+			</rules>
+			<features size="dynamic"/>
+		</psystem>
+	</file>
+</cereal>
+

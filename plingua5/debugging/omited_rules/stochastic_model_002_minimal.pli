@@ -1,0 +1,16 @@
+!evolution_rule
+{
+  [ u -> v ]'h; 
+}
+
+!stochastic_rule
+{
+  [ u -> v ]'h @ sc(int_t); 
+}
+
+!feature_rule
+{
+  [ u -> v ]'h @ fe(int_t); 
+}
+
+@model(stochastic) = evolution_rule, stochastic_rule, feature_rule;

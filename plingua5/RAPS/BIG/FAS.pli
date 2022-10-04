@@ -1,7 +1,7 @@
 @model<stochastic>
 @include "stochastic_model_001.pli"
 
-/* Launch me with_plingua FAS.pli -o FAS.xml -f xml*/
+/* Launch me with plingua FAS.pli -o FAS.xml -f xml*/
 
 def main()
 {

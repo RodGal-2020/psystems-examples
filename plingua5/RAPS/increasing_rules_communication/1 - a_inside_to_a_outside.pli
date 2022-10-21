@@ -2,7 +2,7 @@
 @include "stochastic_model_001.pli"
 
 /* Designed for RAPS 0.0.3.20220819 */
-/* Launch me with: plingua '0 - a_inside_to_a_outside.pli' -o '0 - a_inside_to_a_outside.xml' -f xml*/
+/* Launch me with: plingua '1 - a_inside_to_a_outside.pli' -o '1 - a_inside_to_a_outside.xml' -f xml*/
 
 def main()
 {

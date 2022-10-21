@@ -1,0 +1,66 @@
+/* Designed for RAPS 0.0.3.20220729 */
+
+/* Launch me with: plingua stochastic_001.pli -o stochastic_001_model_001.xml -f xml*/
+
+/* RAPS-like rules */
+
+!RAPS_like_evolution_rule
+{
+  /* Evolution, communication */
+  [ u -> v ]'h; 
+  [ u -> [ v_in ]'h2 ]'h; 
+  [ [ u_in ]'h1 -> v_out ]'h; 
+  [ u_out [ u_in ]'h1 -> v_out [ v_in ]'h2 ]'h; 
+
+  /* Stochastic */
+  [ u -> v ]'h @ sc(int_t); 
+  [ u -> [ v_in ]'h2 ]'h @ sc(int_t); 
+  [ [ u_in ]'h1 -> v ]'h @ sc(int_t); 
+  [ u [ u_in ]'h1 -> v [ v_in ]'h2 ]'h @ sc(int_t); 
+}
+
+/* Standard rules */
+
+!standard_evolution_rule
+{
+  /* Evolution, communication */
+  /* u -> ; */
+  /* u -> v; */
+  /*u -> [ v_in ]'h; */
+  u_out [ ]'h -> [ v_in ]'h;
+  [u_in]'h -> v_out [ ]'h; 
+  [ u_in ]'h -> v; 
+  u [ u_in ]'h -> v [ v_in ]'h; 
+
+  /* Stochastic */
+  /* u -> v @ sc(int_t); */
+  /* u -> [ v_in ]'h @ sc(int_t); */
+  [ u_in ]'h -> v @ sc(int_t); 
+  u [ u_in ]'h -> v [ v_in ]'h @ sc(int_t); 
+}
+
+!skeleton_rule
+{
+  [ [ ]'h ]'h1 --> [ [ ]'h ]'h2 @ sc(int_t);
+  [ [ ]'h ]'h1 --> [ [ ]'h ]'h2;
+}
+
+
+/* Nonstandard RAPS rules */
+
+!RAPS_nonstandard_membrane_presence {
+  [ [ ]'h1 --> v1 [ v2 ]'h2 ]'h @ sc(int_t);
+  [ [ ]'h1 --> v1 [ v2 ]'h2 ]'h;
+}
+
+!RAPS_nonstandard_residual_presence {
+  [ a*0 --> v1 [ v2 ]'h2 ]'h @ sc(int_t);
+  [ a*0 --> v1 [ v2 ]'h2 ]'h;
+}
+
+!RAPS_nonstandard_crazy_multicommunication {
+  [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'l [ v_j ]'m [ v_k ]'n ]'h; 
+  [ u [ u_i ]'i [ u_j ]'j [ u_k ]'k -> v [ v_i ]'l [ v_j ]'m [ v_k ]'n ]'h @ sc(int_t); 
+}
+
+@model(stochastic) = RAPS_like_evolution_rule,standard_evolution_rule,skeleton_rule,RAPS_nonstandard_membrane_presence,RAPS_nonstandard_residual_presence,RAPS_nonstandard_crazy_multicommunication;

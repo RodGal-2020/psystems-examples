@@ -1,0 +1,32 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Designed for RAPS 0.0.3.20221025 */
+/* Launch me with: plingua 0.pli -o 0.xml -f xml */
+
+def main()
+{
+    print("Using model 001 and evolution, both designed for RAPS 0.0.3.20221025\n\n");
+
+    @mu = [ [ ]'1 [ ]'2 [ ]'3]'0;
+
+    @ms(0) += a_outside;
+	@ms(1) += a_inside;
+	@ms(2) += b_inside;
+	@ms(3) += c_inside;
+	
+	
+	/* Send out */
+    [ [ a_inside ]'1 -> a_outside [ ]'1 ]'0 @ sc=100;
+	/* Send in */
+    [ a_outside []'1 -> [ a_inside ]'1 ]'0 @ sc=100;
+	
+	/* Multiple */
+	[ a_outside*2 [ a_inside*3 ]'1 -> a_outside*3 [a_inside*2]'1 ]'0 @ sc=100;
+	
+	/* Crazy - 1 */
+	[a_outside [a_inside]'1 [b_inside]'2 [c_inside]'3 -> a_outside [a_inside]'1 [b_inside]'2 [c_inside]'3 ]'0 @ sc=1;
+	
+	/* Crazy - 2 */
+	[a_outside [ ]'1 [ ]'2 [ ]'3 -> a_outside [a_inside]'1 [b_inside]'2 [c_inside]'3]'0 @ sc=1;
+}

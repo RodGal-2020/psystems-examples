@@ -1,7 +1,7 @@
 @model<stochastic>
 @include "stochastic_model_001.pli"
 
-/* Launch me with plingua FAS.pli -o FAS.xml -f xml*/
+/* Launch me with plingua FAS_3.pli -o FAS_3.xml -f xml*/
 
 def main()
 {
@@ -12,10 +12,13 @@ def main()
 	@ms(e) += FASL*12500;
 	@ms(s) += FASR*6023;
 	@ms(c) += FADD*10040, CASP8*20074, FLIP*48786, CASP3*120460, Bid*15057, Bax*50189, XIAP*18069, Apaf*60230, CASP9*12046;
-	@ms(m) += Smac*60230, Cyto.c*60230, Bcl2*45172;
+	
+	/* [BCl2] is 100 times the one from the first experiment */
+	print("Experiment 3: [BCl2] is 100 times the one from the first experiment");
+	@ms(m) += Smac*60230, Cyto.c*60230, Bcl2*4517200;
 
     /* Constants */
-	k1f = 9.09e-5;
+    k1f = 9.09e-5;
     k1r = 1e-4;
     k2f = 5e-4;
     k2r = 0.2;
@@ -353,14 +356,14 @@ def main()
         [[ Bcl2_Bax ]'m -> Bax[ Bcl2 ]'m ]'c @ sc=k20r;
 
     /* r960_Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m @ sc=k20f */
-    /*    [Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m ]'c @ sc=k20f; */
+        [Bid[ Bcl2 ]'m -> [ Bcl2_Bid ]'m ]'c @ sc=k20f;
 
     /* r970_[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m @ sc=k20r */
-    /*    [[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m ]'c @ sc=k20r; */
+        [[ Bcl2_Bid ]'m -> Bid[ Bcl2 ]'m ]'c @ sc=k20r;
 
     /* r9600_tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m @ sc=k20f */
-    /*    [tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m ]'c @ sc=k20f; */
+        [tBid[ Bcl2 ]'m -> [ Bcl2_tBid ]'m ]'c @ sc=k20f;
 
     /* r9700_[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m @ sc=k20r */
-    /*    [[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m ]'c @ sc=k20r; */
+        [[ Bcl2_tBid ]'m -> tBid[ Bcl2 ]'m ]'c @ sc=k20r;
 }

@@ -1,0 +1,121 @@
+@model<stochastic>
+@include "stochastic_model_001.pli"
+
+/* Launch me with plingua Quorum_sensing.pli -o Quorum_sensing.xml -f xml */
+
+def main()
+{
+	c1=2;
+	c2=2;
+	c3=9;
+	c4=1;
+	c5=10;
+	c6=2;
+	c7=250;
+	c8=200;
+	c9=50;
+	c10=30;
+	c11=20;
+	c12=20;
+	c13=1;
+	c14=5;
+	c15=8;
+	c16=2;
+
+	/* Membrane structure */
+
+	@mu = [ ]'p;
+	/* Original */
+	/* @mu(p) += [ [ ]'b ]'e{i,i} : 101 <= i <= 125; */
+	
+	@mu(p) += [ ]'{e{i,j}} : 1 <= i <= 5, 1 <= j <= 5;
+	
+	/* "Random" distribution of bacterias */
+	q = 5; /* Order of the system */
+	@mu({e{i,i}}) += [ ]'b : 1 <= i <= q;
+	
+	/* Random distribution of bacterias */
+	/*
+		q = 100; 
+		for (i = 0; i<q; i++) {
+			j = rand() % 25 + 101;
+			@mu({j, j}) += [ ]'b;
+		}
+	*/
+
+	/* Initial multisets */
+
+	/* Original */
+	/* @ms(b, {100+c}) += LuxBox : 1 <= c <= 25; */ 
+	@ms(b) += LuxBox : 1 <= c <= q;
+
+	/* Rules */
+
+	/* r1 */ 
+		[ LuxBox --> LuxBox, OHHL ]'b :: c1;
+	/* r2 */ 
+		[ LuxBox --> Luxbox, LuxR ]'b :: c2;
+
+	/* r3 */ 
+		[ LuxR, OHHL --> LuxR_OHHL ]'b :: c3;
+	/* r4 */ 
+		[ LuxR_OHHL --> LuxrR, OHHL ]'b :: c4;
+
+	/* r5 */ 
+		[ LuxBox, LuxR_OHHL --> LuxBox_LuxR_OHHL ]'b :: c5;
+	/* r6 */ 
+		[ LuxBox_LuxR_OHHL --> LuxBox, LuxR_OHHL ]'b :: c6;
+
+	/* r7 */ 
+		[ LuxBox_LuxR_OHHL --> LuxBox_LuxR_OHHL, OHHL ]'b :: c7;
+	/* r8 */ 
+		[ LuxBox_LuxR_OHHL --> LuxBox_LuxR_OHHL, LuxR ]'b :: c8;
+
+	/* r9 */ 
+		/* [ OHHL ]'b --> OHHL []'b :: c9; */
+	/* RAPS-like */
+		[ OHHL --> [OHHL]'out ]'b :: c9;
+
+	/* Degradation */
+	/* r10 */ 
+		[ OHHL --> ]'b :: c10;
+	/* r11 */ 
+		[ LuxR --> ]'b :: c11;
+	/* r12 */ 
+		[ LuxR_OHHL --> ]'b :: c12;
+
+	/* r13 */ 
+		/* OHHL []'b --> [ OHHL ]'b :: c13; */
+	/* r13 RAPS-like */
+		[OHHL []'b --> [ OHHL ]'b]'any :: c13;
+
+	/* r14 */ 
+		[ OHHL --> ]'e :: c14;
+
+	/* Interenvironmental movement rules */
+
+	/* r15 */ 
+		/* [ OHHL ]'e --> [ OHHL ]'es : 101 <= e < es <= 125 :: c15; */
+	/* r15 */ 
+		/* [ OHHL ]'e --> [ OHHL ]'es : 101 <= es < e <= 125 :: c15; */
+	
+	/* r15 */ 
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i+1,j}} : 0 <= i <= 4, 0 <= j <= 4;
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i-1,j}} : 0 <= i <= 4, 0 <= j <= 4;
+		
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i,j+1}} : 0 <= i <= 5, 0 <= j <= 4;
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i,j-1}} : 0 <= i <= 4, 1 <= j <= 5;
+		
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i+1,j+1}} : 0 <= i <= 4, 0 <= j <= 4;
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i-1,j-1}} : 1 <= i <= 5, 1 <= j <= 5;
+		
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i+1,j-1}} : 0 <= i <= 4, 1 <= j <= 5;
+		[ OHHL ]'{e{i,j}} --> [ OHHL ]'{e{i-1,j+1}} : 1 <= i <= 5, 0 <= j <= 4;
+		
+
+	/* r16 */ 
+		/* [ []'b ]'e --> [ []'b ]'es : 101 <= e < es <= 125 :: c16; */
+	/* r16 */ 
+		/* [ []'b ]'e --> [ []'b ]'es : 101 <= es < e <= 125 :: c16; */
+
+}

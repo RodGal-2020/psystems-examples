@@ -1,4 +1,4 @@
-@model<stochastic>
+@model<example_model>
 
 /* Launch me with: plingua maximality_in_pl5.pli -o maximality_in_pl5.xml -f xml */
 
@@ -10,7 +10,7 @@
 }
 !pattern_u_v { [u --> v]'h; }
 
-@model(stochastic) = evolution, @1{communication};
+@model(example_model) = evolution, @1{communication};
 
 def main() {
   @mu = [ ]'0;

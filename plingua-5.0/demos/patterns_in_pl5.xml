@@ -17,31 +17,31 @@
 				<value0>pattern</value0>
 			</features>
 			<strings size="dynamic">
-				<value0>pattern_a_b</value0>
-				<value1>pattern_a_v</value1>
-				<value2>pattern_u_b</value2>
-				<value3>pattern_u_v</value3>
-				<value4>stochastic</value4>
+				<value0>example_model</value0>
+				<value1>pattern_a_b</value1>
+				<value2>pattern_a_v</value2>
+				<value3>pattern_u_b</value3>
+				<value4>pattern_u_v</value4>
 			</strings>
 			<max_multiplicity>1</max_multiplicity>
 			<model>
-				<id>4</id>
+				<id>0</id>
 			</model>
 			<semantics>
 				<value>0</value>
 				<inf>true</inf>
 				<patterns size="dynamic">
 					<value0>
-						<id>0</id>
+						<id>1</id>
 					</value0>
 					<value1>
-						<id>1</id>
+						<id>2</id>
 					</value1>
 					<value2>
-						<id>2</id>
+						<id>3</id>
 					</value2>
 					<value3>
-						<id>3</id>
+						<id>4</id>
 					</value3>
 				</patterns>
 				<children size="dynamic"/>
@@ -112,7 +112,7 @@
 							</key>
 							<value>
 								<type>8</type>
-								<id>0</id>
+								<id>1</id>
 							</value>
 						</value0>
 					</features>
@@ -180,7 +180,7 @@
 							</key>
 							<value>
 								<type>8</type>
-								<id>1</id>
+								<id>2</id>
 							</value>
 						</value0>
 					</features>
@@ -248,7 +248,7 @@
 							</key>
 							<value>
 								<type>8</type>
-								<id>2</id>
+								<id>3</id>
 							</value>
 						</value0>
 					</features>
@@ -324,7 +324,7 @@
 							</key>
 							<value>
 								<type>8</type>
-								<id>3</id>
+								<id>4</id>
 							</value>
 						</value0>
 					</features>

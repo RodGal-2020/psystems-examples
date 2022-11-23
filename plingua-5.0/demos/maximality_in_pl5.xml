@@ -17,7 +17,7 @@
 			<strings size="dynamic">
 				<value0>communication</value0>
 				<value1>evolution</value1>
-				<value2>stochastic</value2>
+				<value2>example_model</value2>
 			</strings>
 			<max_multiplicity>1</max_multiplicity>
 			<model>

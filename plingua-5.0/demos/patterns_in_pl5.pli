@@ -1,0 +1,19 @@
+@model<stochastic>
+
+/* Launch me with: plingua patterns_in_pl5.pli -o patterns_in_pl5.xml -f xml */
+
+!pattern_a_b { [a --> b]'h; }
+!pattern_a_v { [a --> v]'h; }
+!pattern_u_b { [u --> b]'h; }
+!pattern_u_v { [u --> v]'h; }
+
+@model(stochastic) = pattern_a_b, pattern_a_v, pattern_u_b, pattern_u_v;
+
+def main() {
+  @mu = [ ]'0;
+  
+  [a -> b]'0;
+  [a, b -> c]'0;
+  [a -> b, c]'0;
+  [a, b -> c, d]'0;
+}

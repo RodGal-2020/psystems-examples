@@ -1,0 +1,20 @@
+@model<stochastic>
+
+/* Launch me with: plingua maximality_in_pl5.pli -o maximality_in_pl5.xml -f xml */
+
+!evolution {
+	[u --> v]'h;
+}
+!communication { 
+	u [ ]'h --> [v]'h;
+}
+!pattern_u_v { [u --> v]'h; }
+
+@model(stochastic) = evolution, @1{communication};
+
+def main() {
+  @mu = [ ]'0;
+  
+  [a -> b]'0;
+  a [ ]'0 -> [a]'0;
+}

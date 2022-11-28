@@ -1,0 +1,13 @@
+@model<example_model>
+
+/* Launch me with: plingua multiple_features.pli -o multiple_features.xml -f xml */
+
+!pattern_a { [a --> b]'h @ sc(int_t), name(string_t); }
+
+@model(example_model) = pattern_a;
+
+def main() {
+  @mu = [ ]'0;
+  
+  [a -> b]'0 @sc=1, name="Regla 1";
+}

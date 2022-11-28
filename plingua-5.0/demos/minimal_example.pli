@@ -1,0 +1,14 @@
+@model<example_model>
+
+/* Launch me with: plingua minimal_example.pli -o minimal_example.xml -f xml */
+
+!pattern_a_b { [a --> b]'h; }
+
+@model(example_model) = pattern_a_b;
+
+def main() {
+  @mu = [ [ [ ]'3 [ ]'4 ]'2 ]'1;
+  @ms(1) += a;
+  
+  [a -> b]'1;
+}
